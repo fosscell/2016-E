@@ -7,8 +7,8 @@
 	height: auto;/*height: 100%;*/
 	margin: 30px auto;
 	display: block;
-  /*background-image: url(../img/bg.jpg) no-repeat left left;*/
-	background: url(../img/bg.jpg);
+	background: #eee;
+	/*background: url(../img/bg.jpg)*/
 }
 .ib-container:before,
 .ib-container:after {
