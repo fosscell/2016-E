@@ -3,7 +3,8 @@
 
 .ib-container{
 	position: relative;
-	width: 800px;
+	width: 100%;
+	height: 100%;
 	margin: 30px auto;
 	display: block;
   /*background-image: url(../img/bg.jpg) no-repeat left left;*/
