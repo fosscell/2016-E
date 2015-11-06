@@ -1,0 +1,388 @@
+
+/* events */
+
+.ib-container{
+	position: relative;
+	width: 800px;
+	margin: 30px auto;
+	display: block;
+  background-image: url(../img/bg.jpg) no-repeat center center;
+}
+.ib-container:before,
+.ib-container:after {
+    content:"";
+    display:table;
+}
+.ib-container:after {
+    clear:both;
+}
+.ib-container article{
+	display: block;
+	width: 235px;
+	height: 200px;
+	background: #fff;
+	cursor: pointer;
+	float: left;
+	border: 10px solid #fff;
+	text-align: center;
+	text-transform: none;
+	margin: 15px;
+	-webkit-backface-visibility: hidden;
+	z-index: 1;
+	box-shadow:
+		0px 0px 0px 10px rgba(255,255,255,1),
+		1px 1px 3px 10px rgba(0,0,0,0.2);
+	-webkit-transition:
+		opacity 0.4s linear,
+		-webkit-transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+	-moz-transition:
+		opacity 0.4s linear,
+		-moz-transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+	-o-transition:
+		opacity 0.4s linear,
+		-o-transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+	-ms-transition:
+		opacity 0.4s linear,
+		-ms-transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+	transition:
+		opacity 0.4s linear,
+		transform 0.4s ease-in-out,
+		box-shadow 0.4s ease-in-out;
+
+}
+.ib-container h3 a{
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	color: rgba(0, 0, 0, 1);
+	text-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+	opacity: 0.8;
+}
+.ib-container article span #header{
+	font-size: 10px;
+	font-family: "Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;
+	padding: 10px 0;
+	display: block;
+	color: #FFD252;
+	color: rgba(255, 210, 82, 1);
+	text-shadow: 0px 0px 0px rgba(255, 210, 82, 1);
+	text-transform: uppercase;
+	opacity: 0.8;
+}
+.ib-container article p{
+	font-family: Verdana, sans-serif;
+	font-size: 10px;
+	line-height: 13px;
+	color: #333;
+	color: rgba(51, 51, 51, 1);
+	text-shadow: 0px 0px 0px rgba(51, 51, 51, 1);
+	opacity: 0.8;
+}
+.ib-container h3 a,
+.ib-container article #header span,
+.ib-container article p{
+	-webkit-transition:
+		opacity 0.2s linear,
+		text-shadow 0.5s ease-in-out,
+		color 0.5s ease-in-out;
+	-moz-transition:
+		opacity 0.2s linear,
+		text-shadow 0.5s ease-in-out,
+		color 0.5s ease-in-out;
+	-o-transition:
+		opacity 0.2s linear,
+		text-shadow 0.5s ease-in-out,
+		color 0.5s ease-in-out;
+	-ms-transition:
+		opacity 0.2s linear,
+		text-shadow 0.5s ease-in-out,
+		color 0.5s ease-in-out;
+	transition:
+		opacity 0.2s linear,
+		text-shadow 0.5s ease-in-out,
+		color 0.5s ease-in-out;
+}
+/* Hover Style for all the items: blur, scale down*/
+.ib-container article.blur{
+	box-shadow: 0px 0px 20px 10px rgba(255,255,255,1);
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	opacity: 0.7;
+}
+.ib-container article.blur h3 a{
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
+	color: rgba(0, 0, 0, 0);
+	opacity: 0.5;
+}
+.ib-container article.blur #header span{
+	text-shadow: 0px 0px 10px rgba(255, 210, 82, 0.9);
+	color: rgba(255, 210, 82, 0);
+	opacity: 0.5;
+}
+.ib-container article.blur  p{
+	text-shadow: 0px 0px 10px rgba(51, 51, 51, 0.9);
+	color: rgba(51, 51, 51, 0);
+	opacity: 0.5;
+}
+
+/* Hover Style for single item: scale up */
+.ib-container article.active{
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+	box-shadow:
+		0px 0px 0px 10px rgba(255,255,255,1),
+		1px 11px 15px 10px rgba(0,0,0,0.4);
+	z-index: 100;
+	opacity: 1;
+}
+.ib-container article.active h3 a,
+.ib-container article.active header span,
+.ib-container article.active p{
+	opacity; 1;
+}
+article{
+
+}
+
+/* Header Style */
+.header{
+	font-family:'Arial Narrow', Arial, sans-serif;
+	line-height: 24px;
+	font-size: 11px;
+	background: #000;
+	opacity: 0.9;
+	text-transform: uppercase;
+	z-index: 9999;
+	position: relative;
+	-moz-box-shadow: 1px 0px 2px #000;
+	-webkit-box-shadow: 1px 0px 2px #000;
+	box-shadow: 1px 0px 2px #000;
+}
+.header a{
+	padding: 0px 10px;
+	letter-spacing: 1px;
+	color: #ddd;
+	display: block;
+	float: left;
+}
+.header a:hover{
+	color: #fff;
+}
+.header span.right{
+	float: right;
+}
+.header span.right a{
+	float: none;
+	display: inline;
+}
+
+/* events */
+
+/* footer */
+
+#newsfeeds {
+	position:relative;
+	background:rgba(0,0,0,0.8);
+	color:#ffffff;
+	width:100%;
+	bottom:0em;
+	left:0em;
+
+	padding:1em;
+	-webkit-border-image: -webkit-linear-image(top, #bb0000, rgba(0,0,0,0.8));
+//	border-top:0.5em solid #bb0000;
+}
+
+.news-item {
+    width:100%;
+    text-align: center;
+}
+
+.news-info {
+    display: inline-block;
+
+	  width:90%;
+    margin-left: 1em;
+    vertical-align: middle;
+}
+
+/* footer */
+
+/******Speakers page***/
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	width: 90%;
+	height: auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/*-----------------*/
+/***** Hera *****/
+/*-----------------*/
+
+figure.effect-hera h2 {
+	font-size: 1.3em;
+}
+
+figure.effect-hera h2,
+figure.effect-hera p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+}
+
+figure.effect-hera figcaption::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5em;
+	height: 5em;
+	border: 2px solid #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+}
+
+figure.effect-hera p {
+	width: 100px;
+	text-transform: none;
+	font-size: 121%;
+	line-height: 2;
+}
+
+figure.effect-hera p a {
+	color: #fff;
+}
+
+figure.effect-hera p a:hover,
+figure.effect-hera p a:focus {
+	opacity: 0.6;
+}
+
+figure.effect-hera p a span {
+	opacity: 0;
+	font-size: 1.5em;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+
+figure.effect-hera:hover figcaption::before {
+	opacity: 1;
+	-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+}
+
+figure.effect-hera:hover h2 {
+	opacity: 0;
+	-webkit-transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+	transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+}
+
+figure.effect-hera:hover p span:empty {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0); /* just because it's stronger than nth-child */
+	opacity: 1;
+}
+
+/******Speakers page***/
