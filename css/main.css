@@ -210,7 +210,7 @@ article{
 /* footer */
 
 #newsfeeds {
-	position:relative;
+	position:fixed;
 	background:rgba(0,0,0,0.8);
 	color:#ffffff;
 	width:100%;
