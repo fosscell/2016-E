@@ -121,6 +121,14 @@
       /*
         need to solve the footer issue here
       */
+      $(window).scroll(function(){
+        if($(document).scrollTop() > '200vh'){
+          $('#newsfeeds').show();
+        }
+        else{
+          $('#newsfeeds').hide();
+        }
+      })
     </script>
 
 </head>
@@ -548,10 +556,10 @@
                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
                     <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
                 </div>
-	              <div class="text-center" style="height: 100%;width: 100%;margin: 0;padding: 0;">
-			              <iframe width="100%" height="250" frameborder="0" scrolling="no" src="http://www.openstreetmap.org/export/embed.html?bbox=75.93501091003418%2C11.31848056989431%2C75.93877136707306%2C11.321720765540533&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/>
+	              <!--<div class="text-center" style="height: 100%;width: 100%;margin: 0;padding: 0;">
+			              <iframe width="100%" height="250" frameborder="0" scrolling="no" src="http://www.openstreetmap.org/export/embed.html?bbox=75.93501091003418%2C11.31848056989431%2C75.93877136707306%2C11.321720765540533&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/> -->
                     <!--<small><a href="http://www.openstreetmap.org/#map=18/11.32010/75.93689">View Larger Map</a></small>-->
-		            </div>
+		            <!-- </div> -->
             </div>
         </div>
     </section>
