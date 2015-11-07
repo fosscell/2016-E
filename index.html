@@ -35,7 +35,7 @@
     <meta property="og:description" content="FOSSMeet is the annual event on Free and Open source software, conducted at National Institute of Technology, Calicut." />
     <meta name="author" content="FOSSMeet '16" />
 
-	<link rel="shortcut icon" type="image/png" href="img/logo16.png" />
+    <link rel="shortcut icon" type="image/png" href="img/logo16.png" />
     <title>FOSSMeet '16</title>
 
     <!-- Bootstrap Core CSS -->
@@ -78,6 +78,7 @@
 
     <script type="text/javascript">
       $(window).ready(function(){
+        $('#newsfeeds').hide();
         $("#loading").hide();
       })
     </script>
@@ -122,7 +123,7 @@
         need to solve the footer issue here
       */
       $(window).scroll(function(){
-        if($(document).scrollTop() > '200vh'){
+        if($(window).scrollTop() > 100){
           $('#newsfeeds').show();
         }
         else{
@@ -247,7 +248,7 @@
     </section>
 
     <section class="ib-container row" id="ib-container">
-      <div class="row" style="text-align:center;">
+      <div class="row text-center">
         <div class="col-md-12">
           <h1>
             Event Details

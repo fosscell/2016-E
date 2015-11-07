@@ -216,10 +216,8 @@ article{
 	width:100%;
 	bottom:0;
 	left:0em;
-
 	padding:1em;
 	-webkit-border-image: -webkit-linear-image(top, #bb0000, rgba(0,0,0,0.8));
-//	border-top:0.5em solid #bb0000;
 }
 
 .news-item {
