@@ -123,7 +123,6 @@ aside {
 
 @media(min-width:768px) {
     .navbar-default {
-    //    border-color: rgba(255,255,255,.3);
         background-color: transparent;
     }
 

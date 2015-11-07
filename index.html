@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- commenting is my style of dreaming -->
-  <!--               a8888b.              -->
-  <!--              d888888b.             -->
-  <!--              8P"YP"Y88             -->
-  <!--              8|o||o|88             -->
-  <!--              8'    .88             -->
-  <!--              8`._.' Y8.            -->
-  <!--             d/      `8b.          |_ _/ ___|  ___/ _ \/ ___/ ___|     -->
-  <!--           .dP   .     Y8b.         | | |   | |_ | | | \___ \___ \     -->
-  <!--          d8:'   "   `::88b.        | | |___|  _|| |_| |___) |__)|     -->
-  <!--         d8"           `Y88b       |___\____|_|   \___/|____/____/     -->
-  <!--        :8P     '       :888        -->
-  <!--         8a.    :      _a88P        -->
-  <!--       ._/"Yaa_ :    .| 88P|        -->
-  <!--  jgs  \    YP"      `| 8P  `.      -->
-  <!--  a:f  /     \._____.d|    .'       -->
-  <!--       `\_..__)888888P`._.'         -->
-  <!-- commenting is my style of dreaming -->
-  <head>
+
+<!-- commenting is my style of dreaming -->
+<!--               a8888b.              -->
+<!--              d888888b.             -->
+<!--              8P"YP"Y88             -->
+<!--              8|o||o|88             -->
+<!--              8'    .88             -->
+<!--              8`._.' Y8.            -->
+<!--             d/      `8b.          |_ _/ ___|  ___/ _ \/ ___/ ___|     -->
+<!--           .dP   .     Y8b.         | | |   | |_ | | | \___ \___ \     -->
+<!--          d8:'   "   `::88b.        | | |___|  _|| |_| |___) |__)|     -->
+<!--         d8"           `Y88b       |___\____|_|   \___/|____/____/     -->
+<!--        :8P     '       :888        -->
+<!--         8a.    :      _a88P        -->
+<!--       ._/"Yaa_ :    .| 88P|        -->
+<!--       \    YP"      `| 8P  `.      -->
+<!--       /     \._____.d|    .'       -->
+<!--       `\_..__)888888P`._.'         -->
+<!-- commenting is my style of dreaming -->
+
+<head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes" />
+
     <meta property="og:title" content="FOSSMeet '16" />
     <meta property="og:type" content="Website" />
     <!-- <meta property="og:url" content="http://www.fossmeet.in"/> -->
     <meta property="og:image" content="img/poster.png" />
     <meta property="og:description" content="FOSSMeet is the annual event on Free and Open source software, conducted at National Institute of Technology, Calicut." />
     <meta name="author" content="FOSSMeet '16" />
+
     <link rel="shortcut icon" type="image/png" href="img/logo16.png" />
+
     <title>FOSSMeet '16</title>
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    
+
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <link rel="stylesheet" href="css/main.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -49,68 +62,16 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- <link rel="stylesheet" href="css/pace-theme-loading-bar.css"> -->
-    <link rel="stylesheet" href="css/main.css">
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
-    <script type="text/javascript">
-    $(window).ready(function(){
-    $('#newsfeeds').hide(function(){
-      $("#loading").hide();
-    })
-    })
-    </script>
-    <!--  <script src="js/pace-theme-loading-bar.js"></script> -->
-    <script type="text/javascript">
-    $(function() {
-    var $container  = $('#ib-container'),
-    $articles = $container.children('article'),
-    timeout;
-    $articles.on( 'mouseenter', function( event ) {
-    $('#newsfeeds').hide();
-    var $article  = $(this);
-    clearTimeout( timeout );
-    timeout = setTimeout( function() {
-    if( $article.hasClass('active') ) return false;
-    $articles.not( $article.removeClass('blur').addClass('active') )
-    .removeClass('active')
-    .addClass('blur');
-    }, 65 );
-    });
-    $container.on( 'mouseleave', function( event ) {
-    clearTimeout( timeout );
-    $articles.removeClass('active blur');
-    $('#newsfeeds').show();
-    });
-    });
-    </script>
-    <script>
-    /*
-    need to solve the footer issue here
-    */
-    $(window).scroll(function(){
-    if($(window).scrollTop() > 100){
-    //can use as what container shows as $('#newsfeeds').show
-    $('#newsfeeds').show();
-    }
-    else{
-    $('#newsfeeds').hide();
-    }
-    })
-    </script>
+
   </head>
+
   <body id="page-top">
+
     <div id="loading">
       <!-- Loading content, please wait.. -->
       <img src="img/ajax-loader.gif" alt="loading.." />
     </div>
+
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -147,6 +108,7 @@
       </div>
       <!-- /.container-fluid -->
     </nav>
+
     <header>
       <div class="header-content">
         <div class="header-content-inner">
@@ -157,6 +119,7 @@
         </div>
       </div>
     </header>
+
     <section class="bg-primary" id="what">
       <div class="container">
         <div class="row">
@@ -169,6 +132,7 @@
         </div>
       </div>
     </section>
+
     <section id="why">
       <div class="container">
         <div class="row">
@@ -211,6 +175,7 @@
         </div>
       </div>
     </section>
+
     <section class="ib-container" id="ib-container">
       <div class="text-center">
         <h1>Event Details</h1>
@@ -219,39 +184,43 @@
         <article>
           <div id="header">
             <h3>
-            <a target="_blank" href="#">
-              Workshops
-            </a>
+              <a target="_blank" href="#">
+                Workshops
+              </a>
+            </h3>
+            <span>
+              December 8, 2011 by Patrick Cox
+            </span>
+          </div>
+            <p>
+              <img src="img/IMG_7226.JPG" width="235px" height="200px">
+            </p>
+        </article>
+
+        <article>
+          <div id="header">
+            <h3>
+              <a target="_blank" href="#">
+                Lectures
+              </a>
             </h3>
             <span>
               December 8, 2011 by Patrick Cox
             </span>
           </div>
           <p>
-            para para   para para   para para   para para
+            <img src="img/IMG_7254.JPG" width="235px" height="200px">
           </p>
         </article>
-        <article>
-          <div id="header">
-            <h3>
-            <a target="_blank" href="#">
-              Lectures
-            </a>
-            </h3>
-            <span>
-              December 8, 2011 by Patrick Cox
-            </span>
-          </div>
-          <p>
-            para para   para para   para para   para para
-          </p>
-        </article>
-        <article>
-          <div id="header">
-            <h3>
+
+  <!--    <article>
+        <div id="header">
+          <h3>
+
             <a target="_blank" href="#">
               Schedule
             </a>
+
             </h3>
             <span>
               December 1, 2011 by Patrick Cox
@@ -264,6 +233,19 @@
         <article>
           <div id="header">
             <h3>
+
+          </h3>
+          <span>
+            December 1, 2011 by Patrick Cox
+          </span>
+        </div>
+        <p>
+		para para		para para		para para		para para
+        </p>
+      </article> -->
+      <article>
+        <div id="header">
+          <h3>
             <a target="_blank" href="#">
               About US
             </a>
@@ -273,42 +255,31 @@
             </span>
           </div>
           <p>
-            para para   para para   para para   para para
+            <img src="img/IMG_7268.JPG" width="235px" height="200px">
           </p>
         </article>
+
         <article>
-          <div id="header">
-            <h3>
+        <div id="header">
+          <h3>
+
             <a target="_blank" href="#">
               Hackathon
             </a>
+
             </h3>
             <span>
               November 30, 2011 by Mary Lou
             </span>
           </div>
           <p>
-            para para   para para   para para   para para
+            <img src="img/DSC05530.JPG" width="235px" height="200px">
           </p>
         </article>
-        <article>
-          <div id="header">
-            <h3>
-            <a target="_blank" href="#">
-              Previous year Photos
-            </a>
-            </h3>
-            <span>
-              November 30, 2011 by Mary Lou
-            </span>
-          </div>
-          <p>
-            para para   para para   para para   para para
-          </p>
-        </article>
-      </div>
-      
+
+    </div>
     </section>
+
     <div id="speakers" class="page-alternate">
       <div class="grid container">
         <div class="row">
@@ -337,6 +308,7 @@
               </figcaption>
             </figure>
           </div>
+
           <div class="col-md-3 col-sm-3 col-xs-6 text-center">
             <figure class="effect-hera">
               <img src="img/pramode.png" alt="img17"/>
@@ -353,6 +325,7 @@
               </figcaption>
             </figure>
           </div>
+
           <div class="col-md-3 col-sm-3 col-xs-6 text-center">
             <figure class="effect-hera">
               <img src="img/baiju.png" alt="img17"/>
@@ -371,6 +344,7 @@
               </figcaption>
             </figure>
           </div>
+
           <div class="col-md-3 col-sm-3 col-xs-6 text-center">
             <figure class="effect-hera">
               <img src="img/praveen.png" alt="img17"/>
@@ -387,8 +361,11 @@
               </figcaption>
             </figure>
           </div>
+
         </div>
+
         <div class="row">
+
           <div class="col-md-3 col-sm-3 col-xs-6 text-center">
             <figure class="effect-hera">
               <img src="img/sajjad.png" alt="img17"/>
@@ -407,63 +384,70 @@
               </figcaption>
             </figure>
           </div>
-          <div class="col-md-3 col-sm-3 col-xs-6 text-center">
-            <figure class="effect-hera">
-              <img src="img/atm.png" alt="img17"/>
-              <figcaption>
-              <h2>
-              <span>
-                anoop thomas mathew
-              </span>
-              </h2>
-              <p>
-                <a target="_blank" href="img/speakers/atm.png">
-                  <span class="glyphicon glyphicon-link">
-                  </span>
-                </a>
-              </p>
-              </figcaption>
-            </figure>
+
+            <div class="col-md-3 col-sm-3 col-xs-6 text-center">
+              <figure class="effect-hera">
+                <img src="img/atm.png" alt="img17"/>
+                <figcaption>
+                  <h2>
+                    <span>
+                      anoop thomas mathew
+                    </span>
+                  </h2>
+                  <p>
+                    <a target="_blank" href="img/speakers/atm.png">
+                      <span class="glyphicon glyphicon-link">
+                      </span>
+                    </a>
+                  </p>
+                </figcaption>
+
+              </figure>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 text-center">
+              <figure class="effect-hera">
+                <img src="img/nigel.png" alt="img17"/>
+                <figcaption>
+                  <h2>
+                    <span>
+                      nigel babu
+                    </span>
+                  </h2>
+                  <p>
+                    <a target="_blank" href="http://nigelb.me">
+                      <span class="glyphicon glyphicon-link">
+                      </span>
+                    </a>
+                  </p>
+                </figcaption>
+
+              </figure>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6 text-center">
+              <figure class="effect-hera">
+                <img src="img/plus.png" alt="img17"/>
+                <figcaption>
+                  <h2>
+                    <span style="color:black">
+                      and more...
+                    </span>
+                  </h2>
+                  <p>
+                    <a target="_blank" href="http://funnel.fossmeet.in/2014">
+                      <span class="glyphicon glyphicon-link">
+                      </span>
+                    </a>
+                  </p>
+                </figcaption>
+
+              </figure>
+            </div>
+
           </div>
-          <div class="col-md-3 col-sm-3 col-xs-6 text-center">
-            <figure class="effect-hera">
-              <img src="img/nigel.png" alt="img17"/>
-              <figcaption>
-              <h2>
-              <span>
-                nigel babu
-              </span>
-              </h2>
-              <p>
-                <a target="_blank" href="http://nigelb.me">
-                  <span class="glyphicon glyphicon-link">
-                  </span>
-                </a>
-              </p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col-md-3 col-sm-3 col-xs-6 text-center">
-            <figure class="effect-hera">
-              <img src="img/plus.png" alt="img17"/>
-              <figcaption>
-              <h2>
-              <span style="color:black">
-                and more...
-              </span>
-              </h2>
-              <p>
-                <a target="_blank" href="http://funnel.fossmeet.in/2014">
-                  <span class="glyphicon glyphicon-link">
-                  </span>
-                </a>
-              </p>
-              </figcaption>
-            </figure>
-          </div>
+
         </div>
       </div>
-    </div>
+
     <section id="contact">
       <div class="container">
         <div class="row">
@@ -487,6 +471,7 @@
           </div>
         </div>
       </section>
+
       <div id="newsfeeds">
         <div class="news-item">
           <div class="news-info">
@@ -494,5 +479,59 @@
           </div>
         </div>
       </div>
+
+      <!-- jQuery -->
+      <script src="js/jquery.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Plugin JavaScript -->
+      <script src="js/jquery.easing.min.js"></script>
+      <script src="js/jquery.fittext.js"></script>
+      <script src="js/wow.min.js"></script>
+      <!-- Custom Theme JavaScript -->
+      <script src="js/creative.js"></script>
+      <script type="text/javascript">
+        $(window).ready(function(){
+          $('#newsfeeds').hide(function(){
+            $("#loading").hide();
+          })
+        })
+      </script>
+      <!--  <script src="js/pace-theme-loading-bar.js"></script> -->
+      <script type="text/javascript">
+        $(function() {
+          var $container  = $('#ib-container'),
+          $articles = $container.children('article'),
+          timeout;
+          $articles.on( 'mouseenter', function( event ) {
+            $('#newsfeeds').hide();
+            var $article  = $(this);
+            clearTimeout( timeout );
+            timeout = setTimeout( function() {
+              if( $article.hasClass('active') ) return false;
+              $articles.not( $article.removeClass('blur').addClass('active') )
+              .removeClass('active')
+              .addClass('blur');
+            }, 65 );
+          });
+          $container.on( 'mouseleave', function( event ) {
+            clearTimeout( timeout );
+            $articles.removeClass('active blur');
+            $('#newsfeeds').show();
+          });
+        });
+      </script>
+      <script>
+        $(window).scroll(function(){
+          if($(window).scrollTop() > 100){
+            //can use as what container shows as $('#newsfeeds').show
+            $('#newsfeeds').show();
+          }
+          else{
+            $('#newsfeeds').hide();
+          }
+        })
+      </script>
+
     </body>
   </html>
