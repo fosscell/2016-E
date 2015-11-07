@@ -30,7 +30,7 @@
 
     <meta property="og:title" content="FOSSMeet '16" />
     <meta property="og:type" content="Website" />
-    <meta property="og:url" content="http://www.fossmeet.in"/>
+    <!-- <meta property="og:url" content="http://www.fossmeet.in"/> -->
     <meta property="og:image" content="img/poster.png" />
     <meta property="og:description" content="FOSSMeet is the annual event on Free and Open source software, conducted at National Institute of Technology, Calicut." />
     <meta name="author" content="FOSSMeet '16" />
@@ -59,7 +59,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="css/pace-theme-loading-bar.css">
+    <!-- <link rel="stylesheet" href="css/pace-theme-loading-bar.css"> -->
     <link rel="stylesheet" href="css/main.css">
 
     <!-- jQuery -->
@@ -76,7 +76,13 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
-    <script src="js/pace-theme-loading-bar.js"></script>
+    <script type="text/javascript">
+      $(window).ready(function(){
+        $("#loading").hide();
+      })
+    </script>
+
+  <!--  <script src="js/pace-theme-loading-bar.js"></script> -->
 
     <script type="text/javascript">
 			$(function() {
@@ -114,6 +120,11 @@
 </head>
 
 <body id="page-top">
+
+  <div id="loading">
+    <!-- Loading content, please wait.. -->
+    <img src="img/ajax-loader.gif" alt="loading.." />
+  </div>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">

@@ -1,4 +1,21 @@
 
+/* loading bar */
+
+#loading {
+    position:absolute;
+    width:300px;
+    top:50px;
+    left:50%;
+    margin-left:-150px;
+    text-align:center;
+    padding: 10px;
+    font:bold 11px Arial, Helvetica, sans-serif;
+    background: #222222;
+    color: #ffffff;
+}
+
+/* loading bar */
+
 /* events */
 
 .ib-container{
