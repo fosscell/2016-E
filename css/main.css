@@ -14,6 +14,10 @@
     color: #ffffff;
 }
 
+#contact{
+	background: #FEFF99;
+}
+
 /* loading bar */
 
 /* events */
@@ -50,7 +54,7 @@
 	border: 10px solid #fff;
 	text-align: center;
 	text-transform: none;
-	margin: 15px;
+	margin: 25px 30px;
 	-webkit-backface-visibility: hidden;
 	z-index: 1;
 	box-shadow:
