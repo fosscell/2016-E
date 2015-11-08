@@ -12,6 +12,7 @@
     font:bold 11px Arial, Helvetica, sans-serif;
     background: #222222;
     color: #ffffff;
+    z-index: 99;
 }
 
 #contact{
