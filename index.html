@@ -112,6 +112,9 @@
     <header>
 
         <h1 style="font-family: 'FontAwesome';">FOSSMEET'16</h1>
+        <div class="container">
+          <p class="element"></p>
+        </div>
         <canvas id="canvas"></canvas>
         <div class="overlay"></div>
 
@@ -516,14 +519,24 @@
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/jquery.fittext.js"></script>
       <script src="js/wow.min.js"></script>
+      <script src="js/typed.min.js"></script>
       <!-- Custom Theme JavaScript -->
       <script src="js/creative.js"></script>
+
       <script type="text/javascript">
         $(window).ready(function(){
           //$('#newsfeeds').hide('fast', function(){
             $("#loading").hide();
           //})
+          $(".element").typed({
+            strings: ["Hack the Code"],
+            typeSpeed: 0,
+            startDelay: 200,
+            showCursor: true, 
+            cursorChar: "|"
+            });
         })
+
       </script>
       <!--  <script src="js/pace-theme-loading-bar.js"></script> -->
       <script type="text/javascript">

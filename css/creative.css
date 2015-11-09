@@ -470,6 +470,29 @@ img::-moz-selection {
     background: 0 0;
 }
 
-body {
-  //  webkit-tap-highlight-color: #222;
+/*Matbold typedjs blinking cursor code*/
+.element{
+    display: inline-block;
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }

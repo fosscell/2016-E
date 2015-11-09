@@ -25,7 +25,9 @@ header{
 header h1{
     margin:0;
     padding: 0;
-    line-height: 100vh;
+    /*line-height: 100vh;*/
+    padding-top: 20%;
+    padding-bottom: 10px;
 }
 
 canvas{
