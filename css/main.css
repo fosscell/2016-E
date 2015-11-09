@@ -249,12 +249,13 @@ article{
 /* footer */
 
 #newsfeeds {
-	position:fixed;
+	z-index: 1;
+	position: relative;
 	background:rgba(0,0,0,0.8);
 	color:#ffffff;
 	width:100%;
 	bottom:0;
-	left:0em;
+	left:0;
 	padding:1em;
 	-webkit-border-image: -webkit-linear-image(top, #bb0000, rgba(0,0,0,0.8));
 }
