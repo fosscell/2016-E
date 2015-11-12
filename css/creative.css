@@ -51,6 +51,11 @@ p {
     line-height: 1.5;
 }
 
+#whyfoss{
+    text-align: justify;
+    font-family: ubuntu;   
+}
+
 .bg-primary {
     background-color: #f05f40;
 }
