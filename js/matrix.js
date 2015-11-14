@@ -13,12 +13,20 @@
                 drops[x] = Math.floor(Math.random()*window.innerHeight);
             function draw()
             {
-                ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+                ctx.fillStyle = "rgba(240, 95, 64, 0.05)";
                 ctx.fillRect(0, 0, c.width, c.height);
-                var r = Math.floor(Math.random()*255);
+                /*var hex = '#';
+				var range = 'ABCDEF0123456789';
+				for (var i = 0; i < 6; i++ ) {
+					hex += range.charAt(Math.floor(Math.random() * range.length));
+				}*/
+				//hex = ["#ef9a9a" , "#e57373" , "#ef5350" , "#f44336" , "#e53935" , "#d32f2f" , "#ff8a80" , "#ff5252" , "#d50000"];
+				hex = ["#9e9e9e" , "#f5f5f5" , "#e0e0e0" , "#bdbdbd" , "#9e9e9e" , "#757575" , "#a1887f" , "#d7ccc8"]; 
+                /*var r = Math.floor(Math.random()*255);
                 var g = Math.floor(Math.random()*255);
-                var b = Math.floor(Math.random()*255);
-                ctx.fillStyle = 'rgb('+r+','+g+','+b+')';//"#0F0"; //green text
+                var b = Math.floor(Math.random()*255);*/
+                //ctx.fillStyle = 'rgb('+r+','+g+','+b+')';//"#0F0"; //green text
+                ctx.fillStyle = hex[Math.floor(Math.random() * hex.length)];
                 ctx.font = font_size + "px arial";
                 for (var i = 0; i < drops.length; i++)
                 {

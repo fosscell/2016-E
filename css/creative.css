@@ -17,6 +17,7 @@ body {
 hr {
     max-width: 50px;
     border-color: #f05f40;
+    //border-color: #64dd17;
     border-width: 3px;
 }
 
