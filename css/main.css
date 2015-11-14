@@ -2,7 +2,7 @@
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
       width: 915px;
-      height: 500px;
+      height: 600px;
       margin: auto;
   }
 
@@ -24,10 +24,12 @@
 
 #contact{
 	background: #FEFF99;
+	font-family: 'ubuntu';
 }
 
 header{
     background: none;
+    font-family: 'ubuntu';
 }
 header h1{
     margin:0;
@@ -35,6 +37,7 @@ header h1{
     /*line-height: 100vh;*/
     padding-top: 20%;
     padding-bottom: 10px;
+    font-family: 'ubuntu';
 }
 
 canvas{
@@ -43,6 +46,8 @@ canvas{
     position: absolute;
     top:0;left:0;
     z-index: -5;
+    background-color: #F05F40;
+    font-family: 'ubuntu';
 }
 .overlay{
     width:100%;
@@ -51,6 +56,8 @@ canvas{
     top:0;left:0;
     z-index: -4;
     background: rgba(255,255,255,.25);
+	/*background: rgba(240, 95, 64, 0.25);*/
+	font-family: 'ubuntu';
 }
 
 
@@ -267,17 +274,19 @@ article{
 	left:0;
 	padding:1em;
 	-webkit-border-image: -webkit-linear-image(top, #bb0000, rgba(0,0,0,0.8));
+	font-family: 'ubuntu';
 }
 
 .news-item {
     width:100%;
     text-align: center;
+    font-family: 'ubuntu';
 }
 
 .news-info {
     display: inline-block;
-
-	  width:90%;
+	font-family: 'ubuntu';
+	width:90%;
     margin-left: 1em;
     vertical-align: middle;
 }
