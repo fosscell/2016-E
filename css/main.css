@@ -6,6 +6,44 @@
       margin: auto;
   }
 
+.fa{
+	cursor: pointer;
+}
+
+.overlay,.front,.back{
+    position: absolute;
+    top:0;
+    left:0;
+    min-height: 100vh;
+    width:100%;
+    background-position: fixed;
+    background-size: cover;
+}
+.overlay{
+
+    z-index: -1; 
+    background: rgba(0,0,0,.7);
+}
+.front{
+    z-index: -2;
+    background-image: url('../img/c.jpg');
+}
+
+.logohead{
+    position: relative;
+	margin: 0px;
+    padding: 15% 0px 10px;
+    
+}
+}
+
+/*
+.back{
+    z-index: -3;
+    background-image: url('../images/a2.jpg');
+}*/
+
+
 /* loading bar */
 
 #loading {
@@ -30,16 +68,18 @@
 header{
     background: none;
     font-family: 'ubuntu';
+    color: #F05F40;
 }
 header h1{
     margin:0;
     padding: 0;
     /*line-height: 100vh;*/
-    padding-top: 20%;
+    padding-top: 0%;
     padding-bottom: 10px;
     font-family: 'ubuntu';
+    color: #F05F40;
 }
-
+/*
 canvas{
     width:100%;
     height: 100%;
@@ -54,11 +94,13 @@ canvas{
     height: 100%;
     position: absolute;
     top:0;left:0;
-    z-index: -4;
-    background: rgba(255,255,255,.25);
+    z-index: -4;*/
+    /*background: rgba(255,255,255,.25);*/
 	/*background: rgba(240, 95, 64, 0.25);*/
+/*	background-color: #fff;
 	font-family: 'ubuntu';
 }
+*/
 
 
 /* loading bar */
@@ -261,37 +303,6 @@ article{
 }
 */
 /* events */
-
-/* footer */
-
-#newsfeeds {
-	z-index: 1;
-	position: relative;
-	background:rgba(0,0,0,0.8);
-	color:#ffffff;
-	width:100%;
-	bottom:0;
-	left:0;
-	padding:1em;
-	-webkit-border-image: -webkit-linear-image(top, #bb0000, rgba(0,0,0,0.8));
-	font-family: 'ubuntu';
-}
-
-.news-item {
-    width:100%;
-    text-align: center;
-    font-family: 'ubuntu';
-}
-
-.news-info {
-    display: inline-block;
-	font-family: 'ubuntu';
-	width:90%;
-    margin-left: 1em;
-    vertical-align: middle;
-}
-
-/* footer */
 
 /******Speakers page***/
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
