@@ -49,8 +49,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
     <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+  <!--  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'> -->
 
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
@@ -95,11 +95,15 @@
               <a class="page-scroll" href="#why">Why FOSS?</a>
             </li>
             <li>
-              <a class="page-scroll" href="#eventDetails">Event Details</a>
+              <a class="page-scroll" href="#eventDetails">Previous Event Details</a>
             </li>
             <li>
-              <a class="page-scroll" href="#speakers">Speakers</a>
+              <a class="page-scroll" href="#speakers">Previous Speakers</a>
             </li>
+            <!--
+            <li>
+              <a class="page-scroll" href="#register">register now</a>
+            </li> -->
             <li>
               <a class="page-scroll" href="#contact">Contact</a>
             </li>
@@ -118,6 +122,11 @@
         </div>
         <canvas id="canvas"></canvas>
         <div class="overlay"></div>
+        <div class="col-lg-12 text-center">
+			<!--<h2 class="section-heading">Heard Enough? Want to be a Speaker?</h2>
+			<hr class="primary"> -->
+			<a href="#" class="btn btn-default btn-xl" style="font-color:#fff;background-color:rgb(240, 95, 64);">Register Now</a>
+		</div>
 
     </header>
 
@@ -171,7 +180,7 @@ how collaboration can lead to world-class open source products.
               <h2 class="section-heading text-center">What to expect ?</h2>
               <hr class="light">
               <p class="text-faded" style="text-align:justify;">
-                The event will feature a wide range of workshops, discussions and lectures by eminent personalities.
+                The event will feature a wide range of workshops, discussions and lectures by eminent personalities.<br>
                 FOSSMeet will also consist of various hands-on sessions which
                 would help in contributing to various open source projects.
               </p>
@@ -206,28 +215,28 @@ how collaboration can lead to world-class open source products.
         <div class="row">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
-              <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+              <i class="fa fa-4x fa-institution wow bounceIn text-primary"></i>
               <h3>Freedom</h3>
               <p class="text-muted" style="text-align:justify;">You have absolute freedom to do whatever you want with the software. No one's locking you down from taking a look at the code, making and breaking it should you feel like. No one's stopping you from being creative with the amazing piece of software that you already have.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
-              <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+              <i class="fa fa-4x fa-shield wow bounceIn text-primary" data-wow-delay=".1s"></i>
               <h3>Security</h3>
               <p class="text-muted" style="text-align:justify;">You can either work with software that you have no idea or assurance as to how it handles your data or you can work with software that is trusted by millions worldwide. Also, the fact that the source code is available makes it less prone to security vulnerabilities, because "given enough eyeballs, all bugs are shallow".</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
-              <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+              <i class="fa fa-4x fa-database wow bounceIn text-primary" data-wow-delay=".2s"></i>
               <h3>Stability</h3>
               <p class="text-muted" style="text-align:justify;">Should there be a serious bug, a fix to the bug will be released within a matter of days, whereas it might take months for commercial software vendors to do the same. For the simple reason that the vulnerabilities get fixed soon, there aren't many viruses that plague OSS.</p>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box">
-              <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+              <i class="fa fa-4x fa-cloud wow bounceIn text-primary" data-wow-delay=".3s"></i>
               <h3>Reliability</h3>
               <p class="text-muted" style="text-align:justify;">Free software gets the whole community involved in working together to fix problems. Users not only report bugs, they even fix bugs and send in fixes.
 Free software packages do not always compete commercially, but they still compete for a good reputation, and a program which is unsatisfactory will not achieve the popularity that developers hope for. </p>
@@ -317,7 +326,7 @@ Free software packages do not always compete commercially, but they still compet
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Event Details</h2>
+            <h2 class="section-heading">Previous Event Details</h2>
             <hr class="primary">
           </div>
         </div>
@@ -390,11 +399,11 @@ Free software packages do not always compete commercially, but they still compet
   </div>
 
   <!-- Left and right controls -->
-  <a class="left carousel-control" href="#eventDetails" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#eventDetails" role="button" data-slide="prev" style="background-image: none;">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#eventDetails" role="button" data-slide="next">
+  <a class="right carousel-control" href="#eventDetails" role="button" data-slide="next" style="background-image: none;">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -454,7 +463,7 @@ Free software packages do not always compete commercially, but they still compet
               <figcaption>
               <h2>
               <span>
-                baiju   m
+                baiju m
               </span>
               </h2>
               <p>
@@ -571,6 +580,20 @@ Free software packages do not always compete commercially, but they still compet
 
         </div>
       </section>
+      
+   <!-- <section id="register">
+    
+		<div id="container row">
+		
+			<div class="col-lg-12 text-center">
+				<h2 class="section-heading">Heard Enough? Want to be a Speaker?</h2>
+				<hr class="primary">
+				<a href="#" class="btn btn-default btn-xl">Register Now</a>
+			</div>
+								
+		</div>
+    
+    </section> -->
 
     <section id="contact">
       <div class="container">
@@ -582,14 +605,14 @@ Free software packages do not always compete commercially, but they still compet
             </p>
           </div>
           <div class="col-lg-12 text-center">
-            <i class="fa fa-male fa-3x wow bounceIn"></i>
+            <i class="fa fa-user fa-3x wow bounceIn"></i>
             <p>Rajagopalan A (Staff-In-Charge)</p>
           </div>
           <div class="col-lg-6 text-center">
             <i class="fa fa-phone fa-3x wow bounceIn"></i>
 
 			<p id="cttc11">
-				<a title="phone number concealed from BOTS. Click here to reveal?" id="cttc12" onClick="javascript:reveal('82432578390','cttc12','cttc11',':let')">
+				<a title="Phone number concealed from BOTS. Click here to reveal?" id="cttc12" onClick="javascript:reveal('82432578390','cttc12','cttc11',':let')">
 					<i class="fa fa-ban fa-1x wow bounceIn" data-wow-delay=".1s">
 					</i>
 				</a>
@@ -606,14 +629,14 @@ Free software packages do not always compete commercially, but they still compet
 			</p>
           </div>
           <div class="col-lg-4 text-center">
-            <i class="fa fa-male fa-3x wow bounceIn"></i>
+            <i class="fa fa-user fa-3x wow bounceIn"></i>
             <p>K Prasad Krishnan</p>
           </div>
           <div class="col-lg-4 text-center">
             <i class="fa fa-phone fa-3x wow bounceIn"></i>
             
             <p id="cttc21">
-				<a title="phone number concealed from BOTS. Click here to reveal?" id="cttc22" onClick="javascript:reveal('04988779490','cttc22','cttc21',':let')">
+				<a title="Phone number concealed from BOTS. Click here to reveal?" id="cttc22" onClick="javascript:reveal('04988779490','cttc22','cttc21',':let')">
 					<i class="fa fa-ban fa-1x wow bounceIn" data-wow-delay=".1s">
 					</i>
 				</a>
@@ -629,14 +652,14 @@ Free software packages do not always compete commercially, but they still compet
 			</p>
           </div>
           <div class="col-lg-4 text-center">
-            <i class="fa fa-male fa-3x wow bounceIn"></i>
+            <i class="fa fa-user fa-3x wow bounceIn"></i>
             <p>Reshma Sreekumar</p>
           </div>
           <div class="col-lg-4 text-center">
             <i class="fa fa-phone fa-3x wow bounceIn"></i>
             
             <p id="cttc31">
-				<a title="phone number concealed from BOTS. Click here to reveal?" id="cttc32" onClick="javascript:reveal('39359374490','cttc32','cttc31',':let')">
+				<a title="Phone number concealed from BOTS. Click here to reveal?" id="cttc32" onClick="javascript:reveal('39359374490','cttc32','cttc31',':let')">
 					<i class="fa fa-ban fa-1x wow bounceIn" data-wow-delay=".1s">
 					</i>
 				</a>
