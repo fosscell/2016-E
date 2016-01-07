@@ -46,3 +46,21 @@
     new WOW().init();
 
 })(jQuery); // End of use strict
+
+$(document).ready(function()
+{
+for(var j=1;j<=4;j++){
+	var t1 = "cttc" + j + "2";
+	var t2 = "ctt" + j + "2";
+	
+	document.getElementById(t1).onclick();
+	document.getElementById(t2).onclick();
+}
+}
+)
+
+/* E-Mail HotLink Protection Script */
+function backwards(e){return e.split("").reverse().join("")}function reveal(e,n,r,t){var a=backwards(e),d=backwards(t),c=d+a,i=document.createElement("a");i.innerHTML=a,i.href=c;var l=document.getElementById(n),m=document.getElementById(r);m.removeChild(l),m.appendChild(i)}
+
+$(window).ready(function(){$(".element").typed({strings:["Hack the Code"],typeSpeed:0,startDelay:200,showCursor:!0,cursorChar:"|"})});
+
