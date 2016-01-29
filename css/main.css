@@ -43,8 +43,6 @@
 
 }
 
-/* loading bar */
-
 #loading {
     position:absolute;
     width:300px;
@@ -79,7 +77,6 @@ header h1{
     color: #F05F40;
 }
 
-/******Speakers page***/
 *, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:before, .clearfix:after { display: table; content: ''; }
 .clearfix:after { clear: both; }
@@ -94,7 +91,6 @@ header h1{
 	text-align: center;
 }
 
-/* Common style */
 .grid figure {
 	position: relative;
 	float: left;
@@ -166,10 +162,6 @@ header h1{
 	font-size: 68.5%;
 }
 
-/*-----------------*/
-/***** Hera *****/
-/*-----------------*/
-
 figure.effect-hera h2 {
 	font-size: 1.3em;
 }
@@ -227,7 +219,6 @@ figure.effect-hera p a span {
 	transition: opacity 0.35s, transform 0.35s;
 }
 
-
 figure.effect-hera:hover figcaption::before {
 	opacity: 1;
 	-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
@@ -245,8 +236,6 @@ figure.effect-hera:hover p span:empty {
 	transform: translate3d(0,0,0); /* just because it's stronger than nth-child */
 	opacity: 1;
 }
-
-/******Speakers page***/
 
 @font-face {
     font-family: 'Ubuntu';
