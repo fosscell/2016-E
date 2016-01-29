@@ -502,3 +502,7 @@ img::-moz-selection {
     50% { opacity:0; }
     100% { opacity:1; }
 }
+
+.uniqcus{
+margin-top: -0.5cm;
+}
