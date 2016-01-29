@@ -1,0 +1,553 @@
+@font-face
+{
+	font-family: 'roboto';
+	src:url('../fonts/roboto.woff');
+}
+
+*
+{
+	margin:0;
+	font-family: roboto; 
+	background-repeat: no-repeat;
+}
+
+section
+{
+	position:relative;
+	overflow:hidden;
+	min-height:300px;
+	min-width:530px;
+}
+
+.section_wrap section
+{
+	background-color: #fff;
+	background-size: contain;
+	position:relative;
+}
+
+#biglogo 
+{
+	position: absolute;
+	margin: auto;
+	height: 100%;
+	width: 50%;
+}
+
+#biglogo img
+{
+	float:right;
+	margin:35%;
+}
+
+#header
+{
+	height:35px;
+	width:100%;
+	position:fixed;
+	top:0;
+	z-index:2; 
+}
+
+#logo
+{
+	position:fixed;
+	top:0%;
+	cursor:pointer;
+	left:2%;
+	width:2.5%;
+	z-index:6; 	
+}
+
+#menu
+{
+	position:fixed;
+	top:0;
+	width:100%;
+	height:auto;
+	padding:.5%;
+	background-color:#111;
+	border-bottom:1px solid #333;
+	z-index:5;
+	font-size:.27em;
+	text-align: right;
+	color:#fff;
+}
+#menu a
+{
+text-decoration:none;color:#fff;
+}
+#menu span:hover
+{
+	
+  color:rgba(255,255,255,0.8);
+	cursor:pointer;
+}
+
+#contacts_icon
+{
+	margin-right:5%;
+}
+
+#prev_sponsors_icon,#contacts_icon
+{
+	cursor:pointer;
+}
+
+#bg1
+{
+	display:none;
+	background-image: url('../img/oat_crowd.jpg');
+	background-size: contain;	
+}
+
+#bg2
+{
+	display:none;
+	background-image: url('../img/freestyle.jpg');
+	background-size: contain;	
+}
+
+#hd1,#hd2,#hd3
+{
+	margin-right: 5%;
+	text-align: left;
+	width: 50%;
+	float: right;
+}
+#hd2,#hd3
+{
+font-size: .5em;
+}
+
+#hd1
+{
+	margin-top:18%;
+}
+
+article
+{
+	position: absolute;
+	top:30%;
+	margin-left:5%; 
+	font-size:80%;
+	color:white;
+	width:80%;
+}
+
+article a
+{
+	text-decoration:none;
+	text-shadow:1px 1px #000;
+	color:#000;
+}
+
+.window
+{
+	overflow: hidden;
+	position:relative;
+	width:100%;
+	color:#333;
+}
+
+.window span
+{
+	text-align: center;	
+	display:block;
+	width:50%;
+	height:100%;
+	font-size: .45em; 
+	padding:5% 2% 2% 2%;
+	float:right;
+	text-align:justify;
+}
+
+.window div
+{
+	width:50%;
+	height:100%;
+}
+
+.fix
+{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+}
+
+.fix>div
+{
+	width:1000px;
+	height:100%;
+	margin:auto;
+}
+
+.circle
+{
+	float:left;
+	margin-left:25px;
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	border: 3px solid #a0a0a0;
+}
+
+.bg_pic
+{
+	position: absolute;
+	width:50%;
+	height:100%;
+}
+
+#icon_panel
+{
+	width:100%;
+	margin:auto;
+	margin-top:8%; 
+}
+
+#icon_panel>div>span
+{
+	float:left;
+	background-color:#fff;
+	width:20%;
+	padding:1.5% 0 3% 1%;
+}
+
+#icon_panel_ic
+{
+	width:84%;
+	height:89%;
+	margin:auto;
+	font-size:.25em;
+}
+
+.icon_content
+{
+	text-align:center;
+	width:100%;
+	display:block;
+}
+
+#icon_panel span img
+{
+	margin:auto;
+	display:block;
+	height:20%; 
+}
+#icon_panel span img {
+}
+#icon_panel>span>span
+{
+	font-size:.3em;
+	color:#222;
+	text-align:center;
+	display:block;
+}
+
+#icon_panel_desc
+{
+	font-size:.6em;
+	text-align:center;
+	margin-bottom:5%;
+}
+
+.section_wrap
+{
+	position:absolute;
+	width:100%;
+}
+
+#section_wrap_alpha
+{
+	top:0;
+}
+
+.wrap_inner
+{
+	width:1000px;
+	height:100%;
+	margin:auto;
+}
+
+.wrap_inner span
+{
+	position:relative;
+	text-align:center;
+	color:#fff;
+	float:left;
+	width:500px;
+}
+
+.wrap_inner span:first-child
+{
+	width:200px;
+}
+
+.wrap_inner span:last-child
+{
+	width:300px;
+}
+
+.sec_wrap
+{
+	width:50%;
+	float:right;
+}
+
+.sec_wrap_img
+{
+	width:4em;
+	height:4em;
+	display:block;
+	margin:auto;
+	padding:10px;
+	overflow:hidden;
+}
+
+.sec_wrap_title,.sec_wrap_desc
+{
+	width:100%;
+	color:#555;
+	font-size:.7em;
+	display:block;
+	margin:auto;
+	text-align:center; 
+	margin-top:45%;
+}
+
+.sec_wrap_desc
+{
+	margin-top:3%;
+}
+
+.sec_wrap span img
+{
+	display:block;
+	margin:auto;
+	width:3em;
+}
+
+#contacts,#prev_sponsors
+{
+	margin:auto;
+	margin-top:8%;
+	width:75%;
+	height:80%;
+	overflow:none;
+}
+
+#contacts>span
+{
+	width:20%;
+	height:20%;
+	padding:1%;
+	font-size:.25em;
+	float:left;
+	text-align:center;
+}
+
+#contacts>span>span
+{
+	font-weight:bold;
+}
+
+#scroll_wrap section
+{
+	z-index:2;
+}
+
+#scroll_wrap img
+{
+	margin-top:9%;
+	margin-left:3%;
+	
+}
+
+#prev_sponsors span
+{
+	float:left;
+	width:25%;
+	height:25%;
+	text-align:center;
+}
+
+#prev_sponsors img
+{
+	width:50%;
+}
+
+.fb-like
+{
+	margin:3% 5% 0 0%;
+	padding:10px;
+	float:right;
+}
+
+#prv_spn_ttl
+{
+	width:100%;
+	text-align: center;
+	font-size:.6em;
+	color:#000;
+	display:block;
+	margin-top:8%;
+}
+
+#nitc_logo
+{
+	position: absolute;
+	bottom: 22%;
+	left: 48%;
+}
+
+#footer
+{
+	border-top:1px solid #999;
+	background-color:#eee;
+}
+
+#footer a
+{
+	color:#000;
+	text-decoration:none;
+	
+}
+
+
+#cfp
+{
+	position:absolute;
+	bottom:20%;
+	left:29%;
+	padding:1%;
+	font-size: .7em;
+	color:#fff;
+	border:2px solid #fff;
+	border-radius:10px;
+	
+}
+
+#cfp:hover
+{
+	background-color:rgba(0,0,0,0.2);
+}
+
+.tg
+{
+	border-collapse:collapse;
+	margin: auto;
+	border-spacing:0;
+	width: 80%;
+	font-size:.3em;	
+}
+.tgnew
+{
+	border-collapse:collapse;
+	margin: auto;
+	border-spacing:0;
+	width: 100%;
+	height: 100%;
+	font-size:.3em;	
+}	
+.tgnew tr
+{
+	
+	height: 100%;
+		
+}	
+.tgnew td
+{
+	
+	height: 100%;
+		
+}	
+.tg td
+{
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+}
+
+.tg th
+{
+	font-weight:normal;
+	padding:10px 5px;
+	border-style:solid;
+	border-width:1px;
+	overflow:hidden;
+	word-break:normal;
+}
+
+#normalheight 
+{
+	height: auto;
+}
+
+td,th
+{
+	border-color:#aaa;
+	text-align:left; 
+}
+
+th
+{
+	text-align:center;
+	color:#000; 
+	background-color:#f5f5f5;
+}
+
+tr>td:first-child
+{
+	width:15%;
+	font-size:.75em;
+	text-align:center; 
+	background-color:#f5f5f5; 
+	color:#333;
+}
+tr>td>span{
+	color:#555;
+	font-size:0.8em; 
+}
+
+td>a
+{
+	text-decoration:none;
+	color:#333;
+}
+
+.yellow
+{
+	background-color:#fcf4bb; 
+}
+
+.red
+{
+	background-color:#fcd4bd;
+}
+
+.blue
+{
+	background-color:#def9df;
+	text-align:center;  
+}
+
+.green
+{
+	background-color:#a3f59d; 
+}
+
+#legend
+{
+	height:100%;
+	width:;
+}
+
+.color
+{
+	height:5%;
+	width:5%;
+}
