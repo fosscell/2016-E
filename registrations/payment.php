@@ -43,7 +43,7 @@ $mat = $response['modified_at'];
 	$mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
 	if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	$qry = "INSERT INTO instamojo_responses VALUES('$id','$phoneno','$email','$name',$amount,'$purpose','$status','$s_url','$l_url','$mat','$food_prefs','$tshirts','$orgname');";
-  if ($mysqli->query($query) === TRUE) {
+  if ($mysqli->query($qry) === TRUE) {
     header("Location: " . $response['longurl']);
   } else {
     echo "Error creating record: " . $mysqli->error;
