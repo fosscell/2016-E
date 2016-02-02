@@ -18,4 +18,6 @@ $my_auth_token = "";
 
 // instamojo variables
 
+$api = new Instamojo($my_api_key, $my_auth_token);
+
 ?>

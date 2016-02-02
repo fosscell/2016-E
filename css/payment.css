@@ -9,5 +9,30 @@
    transform: translate(50%,0);
  }
  
-  
+
+.text-hint {
+    margin-top: -.5rem;
+    min-height: 3.5rem;
+} 
  
+ 
+.text-hint {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #F1F6FA;
+    border: 1px solid #C1D2E0;
+    border-radius: 4px;
+    color: #7D96AA;
+    position: relative;
+    padding: .5rem;
+    margin-top: .5rem;
+}
+
+
+.text-hint{
+    display: none;
+}
