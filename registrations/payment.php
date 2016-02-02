@@ -26,21 +26,28 @@ try {
 }
 catch (Exception $e) {
     print('Error: ' . $e->getMessage());
+    die();
 }
 
   // after the transaction request
-/*
-Array ( [id] => 3945b213ac004d58a988f8f5efd7e986 [phone] => [email] => a@b.in [buyer_name] => [amount] => 10 [purpose] => FOSSMeet 16 Registrations [status] => Pending [send_sms] => [send_email] => [sms_status] => [email_status] => [shorturl] => [longurl] => https://www.instamojo.com/@spechide/3945b213ac004d58a988f8f5efd7e986 [redirect_url] => [webhook] => [created_at] => 2016-02-02T09:08:29.039Z [modified_at] => 2016-02-02T09:08:29.039Z [allow_repeated_payments] => 1)
-*/
 
-//  commit all values to database
+$id = $response['id'];
+$purpose = $response['purpose'];
+$status = $response['status'];
+$s_url = $response['shorturl'];
+$l_url = $response['longurl'];
+$mat = $response['modified_at'];
 
-/*echo "<script>";
-echo "window.open('". $response['longurl'] . "');";
-echo "</script>";*/
-header("Location: " . $response['longurl']);
+  //  commit all values to database
 
-//echo "<body style="margin:0;background-color:white;width:1024px"><div class='html1' style='width: 1024px;text-align: left;overflow-x: auto;overflow-y: auto; background-color: rgba(0, 0, 0, 0);position: relative;min-height: 768px;; z-index: 0'><div class='html' style='text-align:left;overflow-x:visible;overflow-y:visible;'><div class='body' style='vertical-align:bottom;min-height:752px;color:rgb(0, 0, 0);text-align:left;overflow-x:visible;overflow-y:visible;margin: 8px; '><br style='text-align:left;'/><center><h2>Please make your payment in the new window!</h2></center><center><img src='' alt='' /></center></div></div></div></body>";
+	$mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
+	if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	$qry = "INSERT INTO instamojo_responses VALUES('$id','$phoneno','$email','$name',$amount,'$purpose','$status','$s_url','$l_url','$mat','$food_prefs','$tshirts','$orgname');";
+  if ($mysqli->query($query) === TRUE) {
+    header("Location: " . $response['longurl']);
+  } else {
+    echo "Error creating record: " . $mysqli->error;
+  }
 
 }
 else{
@@ -91,24 +98,33 @@ else{
 
     <li class=" columns small-12  ">
       <label for="id_Field_52247">Food Preference:</label>
-      <input id="id_Field_52247" maxlength="255" name="Field_52247" parsley-required="true" placeholder="" type="text" class="parsley-validated">
+      <select name="Field_52247" id="id_Field_52247" parsley-required="true" class="parsley-validated">
+        <option value="veg">Vegetarian</option>
+        <option value="non_veg">Non Vegetarian</option>
+      </select>
     </li>
 
     <li class=" columns small-12  ">
       <label for="id_Field_65157">FOSSMeet '16 T-Shirts ***:</label>
-      <input id="id_Field_65157" maxlength="255" name="Field_65157" parsley-required="true" placeholder="" type="text" class="parsley-validated">
+      <select name="Field_65157" id="id_Field_65157" parsley-required="true" class="parsley-validated">
+        <option value="Y">Yes</option>
+        <option value="N">No</option>
+      </select>
     </li>
 
     <li class=" columns small-12  ">
       <label for="id_total_amount">Enter Amount:</label>
-      <input id="id_total_amount" name="total_amount" parsley-type="number" placeholder="Enter the amount you want to pay." type="text" class="parsley-validated">
+      <select name="total_amount" id="id_total_amount" parsley-type="number" class="parsley-validated">
+        <option value="100">National Institute of Technology, Calicut STUDENTS</option>
+        <option value="500">Other STUDENTS</option>
+        <option value="1000">Young Professionals</option>
+      </select>
+      
     </li>
 
-    <li class="columns small-12 clear"><input value="Next" type="submit" class="btn--green btn--full" name="fm16_pay_btn"></li>
+    <li class="columns small-12 clear"><input value="Pay Now" type="submit" class="btn--green btn--full" name="fm16_pay_btn"></li>
 
   </ul>
-
-  <!-- Any errors here are handled in offer_view.html -->
 
 </form>
 
