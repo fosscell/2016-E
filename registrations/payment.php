@@ -1,16 +1,41 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(-1);
 
 if(isset($_POST['fm16_pay_btn'])){
+	
+	
+/** 
+* Send a POST requst using cURL 
+* @param string $url to request 
+* @param array $post values to send 
+* @param array $options for cURL 
+* @return string 
+*/ 
+function curl_post($url, array $post = NULL, array $options = array()) 
+{ 
+    $defaults = array( 
+        CURLOPT_POST => 1, 
+		CURLOPT_SSL_VERIFYPEER => 0,
+        CURLOPT_HEADER => 0, 
+        CURLOPT_URL => $url, 
+        CURLOPT_FRESH_CONNECT => 1, 
+        CURLOPT_RETURNTRANSFER => 1, 
+        CURLOPT_FORBID_REUSE => 1, 
+        CURLOPT_TIMEOUT => 4, 
+        CURLOPT_POSTFIELDS => http_build_query($post) 
+    ); 
+
+    $ch = curl_init(); 
+    curl_setopt_array($ch, ($options + $defaults)); 
+    if( ! $result = curl_exec($ch)) 
+    { 
+        trigger_error(curl_error($ch)); 
+    } 
+    curl_close($ch); 
+    return $result; 
+}
+
+	
   require "config.php";
-
-  /*
-
-    $my_api_key => API_KEY
-    $my_auth_token => AUTH_TOKEN
-
-  */
 
   $name = $_POST['billing_address_first_name'];
   $email = $_POST['customer_email'];
@@ -21,24 +46,20 @@ if(isset($_POST['fm16_pay_btn'])){
   $amount = $_POST['total_amount'];
 
   $data = array(
-    'purpose' => 'FOSSMeet 16 Online Registrations',
+    'purpose' => 'FOSSMeet 16 Registrations',
     'amount' => $amount
   );
 
   $headers = array(
-    'http'=>array(
-      'method'=>"POST",
-      'header'=>"api_key: " . $my_api_key . "\r\n" ."auth_token: " . $my_auth_token . "\r\n",
-      'content' => $data
-    )
-  );
+   CURLOPT_HTTPHEADER  => array(
+   "api_key:" . $my_api_key . "\r\n" .
+   "auth_token:" . $my_auth_token . "\r\n"
+  ));
 
-  $context = stream_context_create($headers);
-
-  $fp = file_get_contents('https://www.instamojo.com/api/1.1/payment-requests/',false,$context);
-
-  echo var_dump($fp);
-
+   $ch = curl_post('https://www.instamojo.com/api/1.1/payment-requests/',$data,$headers);
+   
+   echo var_dump($ch);
+	
 }
 else{
 
