@@ -158,7 +158,7 @@ else{
     </li>
 
 <li class="columns small-6 clear">
-<div class="text-hint" id="food_hint">Give us your food preferences so that we can know how to server you!</div>
+<div class="text-hint" id="food_hint">Give us your food preferences so that we can know how to serve you!</div>
 </li>
 
 
