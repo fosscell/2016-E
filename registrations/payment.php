@@ -1,40 +1,6 @@
 <?php
 
 if(isset($_POST['fm16_pay_btn'])){
-	
-	
-/** 
-* Send a POST requst using cURL 
-* @param string $url to request 
-* @param array $post values to send 
-* @param array $options for cURL 
-* @return string 
-*/ 
-function curl_post($url, array $post = NULL, array $options = array()) 
-{ 
-    $defaults = array( 
-        CURLOPT_POST => 1, 
-		CURLOPT_SSL_VERIFYPEER => 0,
-        CURLOPT_HEADER => 0, 
-        CURLOPT_URL => $url, 
-        CURLOPT_FRESH_CONNECT => 1, 
-        CURLOPT_RETURNTRANSFER => 1, 
-        CURLOPT_FORBID_REUSE => 1, 
-        CURLOPT_TIMEOUT => 4, 
-        CURLOPT_POSTFIELDS => http_build_query($post) 
-    ); 
-
-    $ch = curl_init(); 
-    curl_setopt_array($ch, ($options + $defaults)); 
-    if( ! $result = curl_exec($ch)) 
-    { 
-        trigger_error(curl_error($ch)); 
-    } 
-    curl_close($ch); 
-    return $result; 
-}
-
-	
   require "config.php";
 
   $name = $_POST['billing_address_first_name'];
@@ -45,21 +11,36 @@ function curl_post($url, array $post = NULL, array $options = array())
   $tshirts = $_POST['Field_65157'];
   $amount = $_POST['total_amount'];
 
-  $data = array(
-    'purpose' => 'FOSSMeet 16 Registrations',
-    'amount' => $amount
-  );
+  $api = new Instamojo($my_api_key, $my_auth_token);
 
-  $headers = array(
-   CURLOPT_HTTPHEADER  => array(
-   "api_key:" . $my_api_key . "\r\n" .
-   "auth_token:" . $my_auth_token . "\r\n"
-  ));
+try {
+    $response = $api->paymentRequestCreate(array(
+        "purpose" => "FOSSMeet 16 Registrations",
+        "amount" => $amount,
+        "send_email" => true,
+        "email" => $email,
+        "buyer_name" => $name,
+        "phone" => $phoneno,
+        "send_sms" => false
+        ));
+}
+catch (Exception $e) {
+    print('Error: ' . $e->getMessage());
+}
 
-   $ch = curl_post('https://www.instamojo.com/api/1.1/payment-requests/',$data,$headers);
-   
-   echo var_dump($ch);
-	
+  // after the transaction request
+/*
+Array ( [id] => 3945b213ac004d58a988f8f5efd7e986 [phone] => [email] => a@b.in [buyer_name] => [amount] => 10 [purpose] => FOSSMeet 16 Registrations [status] => Pending [send_sms] => [send_email] => [sms_status] => [email_status] => [shorturl] => [longurl] => https://www.instamojo.com/@spechide/3945b213ac004d58a988f8f5efd7e986 [redirect_url] => [webhook] => [created_at] => 2016-02-02T09:08:29.039Z [modified_at] => 2016-02-02T09:08:29.039Z [allow_repeated_payments] => 1)
+*/
+
+//  commit all values to database
+
+echo "<script>";
+echo "window.open('". $response['longurl'] . "','_blank');";
+echo "</script>";
+
+echo "<body style="margin:0;background-color:white;width:1024px"><div class='html1' style='width: 1024px;text-align: left;overflow-x: auto;overflow-y: auto; background-color: rgba(0, 0, 0, 0);position: relative;min-height: 768px;; z-index: 0'><div class='html' style='text-align:left;overflow-x:visible;overflow-y:visible;'><div class='body' style='vertical-align:bottom;min-height:752px;color:rgb(0, 0, 0);text-align:left;overflow-x:visible;overflow-y:visible;margin: 8px; '><br style='text-align:left;'/><center><h2>Please make your payment in the new window!</h2></center><center><img src='' alt='' /></center></div></div></div></body>";
+
 }
 else{
 

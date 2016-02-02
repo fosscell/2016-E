@@ -9,6 +9,8 @@ $db_pass = "";
 
 // database variables
 
+require "instamojo.php";
+
 // instamojo variables
 
 $my_api_key = "";
