@@ -35,11 +35,12 @@ Array ( [id] => 3945b213ac004d58a988f8f5efd7e986 [phone] => [email] => a@b.in [b
 
 //  commit all values to database
 
-echo "<script>";
-echo "window.open('". $response['longurl'] . "','_blank');";
-echo "</script>";
+/*echo "<script>";
+echo "window.open('". $response['longurl'] . "');";
+echo "</script>";*/
+header("Location: " . $response['longurl']);
 
-echo "<body style="margin:0;background-color:white;width:1024px"><div class='html1' style='width: 1024px;text-align: left;overflow-x: auto;overflow-y: auto; background-color: rgba(0, 0, 0, 0);position: relative;min-height: 768px;; z-index: 0'><div class='html' style='text-align:left;overflow-x:visible;overflow-y:visible;'><div class='body' style='vertical-align:bottom;min-height:752px;color:rgb(0, 0, 0);text-align:left;overflow-x:visible;overflow-y:visible;margin: 8px; '><br style='text-align:left;'/><center><h2>Please make your payment in the new window!</h2></center><center><img src='' alt='' /></center></div></div></div></body>";
+//echo "<body style="margin:0;background-color:white;width:1024px"><div class='html1' style='width: 1024px;text-align: left;overflow-x: auto;overflow-y: auto; background-color: rgba(0, 0, 0, 0);position: relative;min-height: 768px;; z-index: 0'><div class='html' style='text-align:left;overflow-x:visible;overflow-y:visible;'><div class='body' style='vertical-align:bottom;min-height:752px;color:rgb(0, 0, 0);text-align:left;overflow-x:visible;overflow-y:visible;margin: 8px; '><br style='text-align:left;'/><center><h2>Please make your payment in the new window!</h2></center><center><img src='' alt='' /></center></div></div></div></body>";
 
 }
 else{
