@@ -1,5 +1,7 @@
 <?php
-$valid_passwords = array ("speakers" => "noshare");
+require "config.php";
+
+$valid_passwords = array ($user_id => $no_pass);
 $valid_users = array_keys($valid_passwords);
 $user = $_SERVER['PHP_AUTH_USER'];
 $pass = $_SERVER['PHP_AUTH_PW'];
@@ -10,7 +12,7 @@ if (!$validated) {
   die ("Not authorized");
 }
 // continue only if authenticated
-require "config.php";
+
 $qry = "SELECT * FROM instamojo_responses";
 $rslt = $mysqli->query($qry);
 echo "<table>";

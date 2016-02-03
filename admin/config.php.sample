@@ -6,6 +6,8 @@ $db_server = "";
 $db_name = "";
 $db_user = "";
 $db_pass = "";
+$user_id = "";
+$no_pass = "";
 
 // database variables
 
