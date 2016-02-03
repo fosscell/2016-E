@@ -81,7 +81,7 @@ else{
 
     <li class=" columns small-6 clear ">
       <label for="id_billing_address_first_name">Name:</label>
-      <input class="text-input parsley-validated" id="id_billing_address_first_name" maxlength="20" name="billing_address_first_name" parsley-maxlength="20" parsley-maxlength-message="Please keep the length below 20" parsley-required="true" parsley-required-message="Please fill in your name." placeholder="Enter your full name." type="text" onfocus="document.getElementById('name_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onfocusout="document.getElementById('name_hint').style='display: none;';">
+      <input class="text-input parsley-validated" id="id_billing_address_first_name" maxlength="20" name="billing_address_first_name" parsley-maxlength="20" parsley-maxlength-message="Please keep the length below 20" parsley-required="true" parsley-required-message="Please fill in your name." placeholder="Enter your full name." type="text" onfocus="document.getElementById('name_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('name_hint').style='display: none;';">
     </li>
 
 <li class="columns small-6 clear">
@@ -94,7 +94,7 @@ else{
 
     <li class=" columns small-6 clear ">
       <label for="id_customer_email">Email Address:</label>
-      <input class="text-input parsley-validated" id="id_customer_email" maxlength="75" name="customer_email" parsley-required="true" parsley-required-message="Please fill in your email address." parsley-type="email" parsley-type-email-message="Please enter a valid email" placeholder="So we can send you the purchase details." type="email" onfocus="document.getElementById('email_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onfocusout="document.getElementById('email_hint').style='display: none;';">
+      <input class="text-input parsley-validated" id="id_customer_email" maxlength="75" name="customer_email" parsley-required="true" parsley-required-message="Please fill in your email address." parsley-type="email" parsley-type-email-message="Please enter a valid email" placeholder="So we can send you the purchase details." type="email" onfocus="document.getElementById('email_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('email_hint').style='display: none;';">
     </li>
 
 <li class="columns small-6 clear">
@@ -106,7 +106,7 @@ else{
 
     <li class=" columns small-6 clear  ">
       <label for="id_customer_phone">Phone Number:</label>
-      <input class="text-input parsley-validated" id="id_customer_phone" maxlength="20" name="customer_phone" parsley-maxlength="20" parsley-maxlength-message="Please keep the length below 20" parsley-required="true" parsley-required-message="Please fill in your phone number." parsley-type="phone" parsley-type-phone-message="Please enter a valid phone number" placeholder="Your phone number" type="tel" onfocus="document.getElementById('no_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onfocusout="document.getElementById('no_hint').style='display: none;';">
+      <input class="text-input parsley-validated" id="id_customer_phone" maxlength="20" name="customer_phone" parsley-maxlength="20" parsley-maxlength-message="Please keep the length below 20" parsley-required="true" parsley-required-message="Please fill in your phone number." parsley-type="phone" parsley-type-phone-message="Please enter a valid phone number" placeholder="Your phone number" type="tel" onfocus="document.getElementById('no_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('no_hint').style='display: none;';">
     </li>
 
 <li class="columns small-6 clear">
@@ -123,7 +123,7 @@ else{
 
     <li class=" columns small-6 clear  ">
       <label for="id_total_amount">Enter Amount:</label>
-      <select name="total_amount" id="id_total_amount" parsley-type="number" class="parsley-validated" onfocus="document.getElementById('amt_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onfocusout="document.getElementById('amt_hint').style='display: none;';if(document.getElementById('id_total_amount').value == 100) document.getElementById('id_Field_72942').value='National Institute of Technology, Calicut';">
+      <select name="total_amount" id="id_total_amount" parsley-type="number" class="parsley-validated" onfocus="document.getElementById('amt_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('amt_hint').style='display: none;';if(document.getElementById('id_total_amount').value == 100) document.getElementById('id_Field_72942').value='National Institute of Technology, Calicut';">
         <option value="100">Students of National Institute of Technology, Calicut</option>
         <option value="500">Students of other Institutes</option>
         <option value="1000" selected>Professionals</option>
@@ -137,7 +137,7 @@ else{
 
     <li class=" columns small-6 clear  ">
       <label for="id_Field_72942">Institution Name:</label>
-      <input id="id_Field_72942" maxlength="255" name="Field_72942" parsley-required="true" placeholder="" type="text" class="parsley-validated" onfocus="document.getElementById('inst_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onfocusout="document.getElementById('inst_hint').style='display: none;';">
+      <input id="id_Field_72942" maxlength="255" name="Field_72942" parsley-required="true" placeholder="" type="text" class="parsley-validated" onfocus="document.getElementById('inst_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('inst_hint').style='display: none;';">
     </li>
 
 <li class="columns small-6 clear">
@@ -150,7 +150,7 @@ else{
 
     <li class=" columns small-6 clear  ">
       <label for="id_Field_52247">Food Preference:</label>
-      <select name="Field_52247" id="id_Field_52247" parsley-required="true" class="parsley-validated" onfocus="document.getElementById('food_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onfocusout="document.getElementById('food_hint').style='display: none;';">
+      <select name="Field_52247" id="id_Field_52247" parsley-required="true" class="parsley-validated" onfocus="document.getElementById('food_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('food_hint').style='display: none;';">
         <option value="veg">Vegetarian</option>
         <option value="non_veg">Non Vegetarian</option>
       </select>
@@ -171,7 +171,7 @@ else{
 
     <li class=" columns small-6 clear  ">
       <label for="id_Field_65157">FOSSMeet '16 T-Shirts <i>***</i>:</label>
-      <select name="Field_65157" id="id_Field_65157" parsley-required="true" class="parsley-validated" onfocus="document.getElementById('tshirt_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onfocusout="document.getElementById('tshirt_hint').style='display: none;';">
+      <select name="Field_65157" id="id_Field_65157" parsley-required="true" class="parsley-validated" onfocus="document.getElementById('tshirt_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('tshirt_hint').style='display: none;';">
         <option value="Y">Yes</option>
         <option value="N">No</option>
       </select>
