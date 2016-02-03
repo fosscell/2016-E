@@ -19,8 +19,7 @@ try {
         "email" => $email,
         "buyer_name" => $name,
         "phone" => $phoneno,
-        "send_sms" => false/*,
-        "redirect_url" => "return.php"*/
+        "send_sms" => false
         ));
 }
 catch (Exception $e) {
@@ -189,7 +188,6 @@ else{
 
 </body>
 </html>
-
 
 <?php
 }
