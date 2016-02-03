@@ -1,4 +1,15 @@
 <?php
+$valid_passwords = array ("speakers" => "noshare");
+$valid_users = array_keys($valid_passwords);
+$user = $_SERVER['PHP_AUTH_USER'];
+$pass = $_SERVER['PHP_AUTH_PW'];
+$validated = (in_array($user, $valid_users)) && ($pass == $valid_passwords[$user]);
+if (!$validated) {
+  header('WWW-Authenticate: Basic realm="admin cPanel"');
+  header('HTTP/1.0 401 Unauthorized');
+  die ("Not authorized");
+}
+// continue only if authenticated
 require "config.php";
 $qry = "SELECT * FROM instamojo_responses";
 $rslt = $mysqli->query($qry);
