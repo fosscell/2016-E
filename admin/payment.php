@@ -10,6 +10,11 @@ if(isset($_POST['fm16_pay_btn'])){
   $food_prefs = $_POST['Field_52247'];
   $tshirts = $_POST['Field_65157'];
   $amount = $_POST['total_amount'];
+  
+  if($tshirts == 'Y'){
+	  $amount = $amount + 300;
+	  // add tshirt cost here
+  }
 
   try {
     $response = $api->paymentRequestCreate(array(
