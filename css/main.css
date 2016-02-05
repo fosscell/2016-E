@@ -241,5 +241,5 @@ figure.effect-hera:hover p span:empty {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    src: local('Ubuntu'), url(https://fonts.gstatic.com/s/ubuntu/v8/sDGTilo5QRsfWu6Yc11AXg.woff2) format('woff2');
+    src: local('Ubuntu'), url(../fonts/sDGTilo5QRsfWu6Yc11AXg.woff2) format('woff2');
 }
