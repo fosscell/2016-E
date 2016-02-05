@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Feb 03, 2016 at 09:44 PM
+-- Generation Time: Feb 05, 2016 at 02:47 PM
 -- Server version: 5.5.46-0ubuntu0.14.04.2-log
 -- PHP Version: 5.5.9-1ubuntu4.14
 
@@ -40,12 +40,8 @@ CREATE TABLE IF NOT EXISTS `instamojo_responses` (
   `FOOD_PREFS` varchar(100) NOT NULL,
   `T_SHIRTS` char(1) NOT NULL,
   `ORG_NAME` varchar(500) NOT NULL,
-  PRIMARY KEY (`ID`)
+  PRIMARY KEY (`ID`,`modified_at`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `instamojo_responses`
---
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
