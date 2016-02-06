@@ -1,4 +1,18 @@
 
+-media screen and (min-width: 640px) {
+ 	.effect-hera > img {
+    		width: 915px;
+       	height: 600px;
+       	margin: auto;
+ 	}
+ }
+ @media screen and (max-width: 640px) {
+ 	.effect-hera > img {
+       	height: auto;
+       	margin: auto;
+ 	}
+ }
+ 
 .fa{
 	cursor: pointer;
 }
