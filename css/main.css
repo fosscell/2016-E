@@ -1,18 +1,4 @@
-@media screen and (min-width: 640px) {
-	.carousel-inner > .item > img,
-	.carousel-inner > .item > a > img {
-   		width: 915px;
-      	height: 600px;
-      	margin: auto;
-	}
-}
-@media screen and (max-width: 640px) {
-	.carousel-inner > .item > img,
-	.carousel-inner > .item > a > img {
-      	height: auto;
-      	margin: auto;
-	}
-}
+
 .fa{
 	cursor: pointer;
 }
@@ -95,7 +81,7 @@ header h1{
 	position: relative;
 	float: left;
 	overflow: hidden;
-	margin: 10px 1%;
+	margin: 15px 45%;
 	width: 90%;
 	height: auto;
 	text-align: center;
@@ -114,7 +100,7 @@ header h1{
 	padding: 2em;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 1.25em;
+	font-size: 1em;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 }
