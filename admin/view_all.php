@@ -12,14 +12,26 @@ if (!$validated) {
   die ("Not authorized");
 }
 // continue only if authenticated
-
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes" /><link rel="shortcut icon" type="image/png" href="//fossmeet.in/img/logo16.png" /><title>FOSSMeet '16</title><link rel="stylesheet" href="//fossmeet.in/css/payment.css">
+</head>
+<body>
+<?php
 $mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
-$qry = "SELECT * FROM instamojo_responses;";
+$qry = "SELECT * FROM instamojo_responses ORDER BY modified_at DESC;";
 $rslt = $mysqli->query($qry);
-echo "<table>";
-if ($rslt->num_rows <= 0) {
+
+if ($rslt->num_rows < 0) {
 	echo "Error getting record: " . $mysqli->error;
 } else {
+echo "Total registrations: " . $rslt->num_rows . "<br>";
+echo "<table>";
+echo "<tr>";
+echo "<th></th><th>NAME</th><th>phone number</th><th>electronic mail</th><th>name</th><th>amount paid</th><th>food preference</th><th>t-shirt</th>";
+echo "</tr>";
 	// output data of each row
 	while($row = $rslt->fetch_assoc()) {
 		echo "<tr>";
@@ -36,8 +48,12 @@ if ($rslt->num_rows <= 0) {
 		//echo "<td>".$row['LONG_URL']."</td>";
 		echo "<td>".$row['FOOD_PREFS']."</td>";
 		echo "<td>".$row['T_SHIRTS']."</td>";
+		echo "<td>".$row['TSHIRT_SPEC']."</td>";
 		echo "</tr>";
 	}
+echo "</table>\n";
 }
-echo "</table>";
+
 ?>
+</body>
+</html>

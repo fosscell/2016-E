@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <link rel="shortcut icon" type="image/png" href="../img/logo16.png" />
+    <link rel="shortcut icon" type="image/png" href="//fossmeet.in/img/logo16.png" />
 
     <title>FOSSMeet '16</title>
 
-    <link rel="stylesheet" href="../css/payment.css">
+    <link rel="stylesheet" href="//fossmeet.in/css/payment.css">
 
 </head>
 <body>
@@ -69,10 +69,10 @@
 
     <li class=" columns small-6 clear  ">
       <label for="id_total_amount">Enter Amount:</label>
-      <select name="total_amount" id="id_total_amount" parsley-type="number" class="parsley-validated" onfocus="document.getElementById('amt_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('amt_hint').style='display: none;';if(document.getElementById('id_total_amount').value == 100) document.getElementById('id_Field_72942').value='National Institute of Technology, Calicut';">
-        <option value="100">Students of National Institute of Technology, Calicut</option>
-        <option value="500">Students of other Institutes</option>
-        <option value="1000" selected>Professionals</option>
+      <select name="total_amount" id="id_total_amount" parsley-type="number" class="parsley-validated" onfocus="document.getElementById('amt_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('amt_hint').style='display: none;';if(document.getElementById('id_total_amount').value == 200) document.getElementById('id_Field_72942').value='National Institute of Technology, Calicut';">
+        <option value="200">Students of National Institute of Technology, Calicut -- ₹200 </option>
+        <option value="500">Students of other Institutes -- ₹500</option>
+        <option value="1000" selected>Professionals -- ₹1000</option>
       </select>
     </li>
 
@@ -112,14 +112,36 @@
 
 
 <li class="columns small-6 clear">
-<div class="text-hint" id="tshirt_hint">Do you want the FOSSMeet '16 official T-Shirts? <small>The above amount does not include the T-Shirt cost.</small></div>
+<div class="text-hint" id="tshirt_hint">Do you want the FOSSMeet '16 official T-Shirts?</div>
 </li>
 
     <li class=" columns small-6 clear  ">
-      <label for="id_Field_65157">FOSSMeet '16 T-Shirts <i>***</i>:</label>
+      <label for="id_Field_65157">FOSSMeet '16 T-Shirts <i><small>The registration amount does not include the T-Shirt cost.</small></i>:</label>
       <select name="Field_65157" id="id_Field_65157" parsley-required="true" class="parsley-validated" onfocus="document.getElementById('tshirt_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('tshirt_hint').style='display: none;';">
-        <option value="Y">Yes</option>
-        <option value="N">No</option>
+                <option value="N">No</option><option value="Y">Yes</option>
+
+      </select>
+    </li>
+
+
+</div>
+
+    <div class="row" id="optField">
+
+
+<li class="columns small-6 clear">
+<div class="text-hint" id="tshirt_spec_hint">The size you require for your FOSSMeet '16 official T-Shirts.</div>
+</li>
+
+    <li class=" columns small-6 clear  ">
+      <label for="TSHIRT_SPEC">Your T-Shirt size: </label>
+      <select name="TSHIRT_SPEC" id="id_TSHIRT_SPEC" parsley-required="true" class="parsley-validated" onfocus="document.getElementById('tshirt_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('tshirt_hint').style='display: none;';">
+        <option value="NA">Not Applicable</option>
+                <option value="S">Small</option>
+        <option value="M">Medium</option>
+<option value="L">Large</option>
+<option value="XL">eXtra Large</option>
+<option value="XXL">XXL</option>
       </select>
     </li>
 
@@ -127,7 +149,7 @@
 </div>
 
     <li class="columns small-6 clear"><input value="Pay Now" type="submit" class="btn--green btn--full" name="fm16_pay_btn">
-	<p class="text-center"><small class="grey notice display-inline">By purchasing, you've read &amp; agreed to our <a href="terms.html" target="_blank">Terms</a> &amp; <a href="privacy.html" target="_blank">Privacy Policy</a>.</small></p>
+	<!--<p class="text-center"><small class="grey notice display-inline">By purchasing, you've read &amp; agreed to our <a href="terms.html" target="_blank">Terms</a> &amp; <a href="privacy.html" target="_blank">Privacy Policy</a>.</small></p>-->
 	</li>
 
   </ul>
@@ -135,7 +157,7 @@
 
 </form>
 
-<script src="../js/payment.js"></script>
+<script src="//fossmeet.in/js/payment.js"></script>
 
 </body>
 </html>

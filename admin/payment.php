@@ -10,11 +10,7 @@ if(isset($_POST['fm16_pay_btn'])){
   $food_prefs = $_POST['Field_52247'];
   $tshirts = $_POST['Field_65157'];
   $amount = $_POST['total_amount'];
-  
-  if($tshirts == 'Y'){
-	  $amount = $amount + 300;
-	  // add tshirt cost here
-  }
+  $tshirtspec = $_POST['TSHIRT_SPEC'];
 
   try {
     $response = $api->paymentRequestCreate(array(
@@ -45,7 +41,7 @@ if(isset($_POST['fm16_pay_btn'])){
 
   $mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  $qry = "INSERT INTO instamojo_responses VALUES('$id','$phoneno','$email','$name',$amount,'$purpose','$status','$s_url','$l_url','$mat','$food_prefs','$tshirts','$orgname');";
+  $qry = "INSERT INTO instamojo_responses VALUES('$id','$phoneno','$email','$name',$amount,'$purpose','$status','$s_url','$l_url','$mat','$food_prefs','$tshirts','$orgname','$tshirtspec');";
   if ($mysqli->query($qry) === TRUE) {
     header("Location: " . $response['longurl']);
   } else {
