@@ -543,7 +543,7 @@ td>a
 .green
 {
 	background-color:#a3f59d;
-	text-align:center; 
+	text-align:center;
 	color: #000;
 }
 
@@ -557,4 +557,8 @@ td>a
 {
 	height:5%;
 	width:5%;
+}
+
+.lockdown{
+	background-color: #fff;
 }
