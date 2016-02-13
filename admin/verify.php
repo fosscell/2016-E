@@ -10,7 +10,7 @@ if (!$validated) {
   header('HTTP/1.0 401 Unauthorized');
   die ("Not authorized");
 }
-echo "<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='apple-mobile-web-app-capable' content='yes' /><link rel='shortcut icon' type='image/png' href='//fossmeet.in/img/logo16.png' /><title>FOSSMeet '16</title><link rel='stylesheet' href='//fossmeet.in/css/payment.css'></head><body>";
+echo "<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='apple-mobile-web-app-capable' content='yes' /><link rel='shortcut icon' type='image/png' href='logo16.png' /><title>FOSSMeet '16</title><link rel='stylesheet' href='payment.css'></head><body>";
 try{
   $response = $api->paymentsList();
 }
@@ -23,7 +23,7 @@ foreach($response as $i){
   echo "<td>" . $i['buyer_name'] . "</td>";
   echo "<td>" . $i['status'] . "</td>";
   echo "<td>" . $i['currency'] . $i['unit_price'] . "</td>";
-  echo "<td>" . $i['created_at'] . "</td>";    
+  echo "<td>" . $i['created_at'] . "</td>";
   echo "</tr>";
 }
 echo "</table>";

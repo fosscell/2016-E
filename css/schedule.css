@@ -7,7 +7,7 @@
 table
 {
 	margin:0;
-	font-family: roboto; 
+	font-family: roboto;
 	background-repeat: no-repeat;
 }
 
@@ -26,7 +26,7 @@ section
 	position:relative;
 }
 
-#biglogo 
+#biglogo
 {
 	position: absolute;
 	margin: auto;
@@ -46,7 +46,7 @@ section
 	width:100%;
 	position:fixed;
 	top:0;
-	z-index:2; 
+	z-index:2;
 }
 
 #logo
@@ -56,7 +56,7 @@ section
 	cursor:pointer;
 	left:2%;
 	width:2.5%;
-	z-index:6; 	
+	z-index:6;
 }
 
 #menu
@@ -79,7 +79,7 @@ text-decoration:none;color:#fff;
 }
 #menu span:hover
 {
-	
+
   color:rgba(255,255,255,0.8);
 	cursor:pointer;
 }
@@ -98,14 +98,14 @@ text-decoration:none;color:#fff;
 {
 	display:none;
 	background-image: url('../img/oat_crowd.jpg');
-	background-size: contain;	
+	background-size: contain;
 }
 
 #bg2
 {
 	display:none;
 	background-image: url('../img/freestyle.jpg');
-	background-size: contain;	
+	background-size: contain;
 }
 
 #hd1,#hd2,#hd3
@@ -129,7 +129,7 @@ article
 {
 	position: absolute;
 	top:30%;
-	margin-left:5%; 
+	margin-left:5%;
 	font-size:80%;
 	color:white;
 	width:80%;
@@ -152,11 +152,11 @@ article a
 
 .window span
 {
-	text-align: center;	
+	text-align: center;
 	display:block;
 	width:50%;
 	height:100%;
-	font-size: .45em; 
+	font-size: .45em;
 	padding:5% 2% 2% 2%;
 	float:right;
 	text-align:justify;
@@ -204,7 +204,7 @@ article a
 {
 	width:100%;
 	margin:auto;
-	margin-top:8%; 
+	margin-top:8%;
 }
 
 #icon_panel>div>span
@@ -234,7 +234,7 @@ article a
 {
 	margin:auto;
 	display:block;
-	height:20%; 
+	height:20%;
 }
 #icon_panel span img {
 }
@@ -313,7 +313,7 @@ article a
 	font-size:.7em;
 	display:block;
 	margin:auto;
-	text-align:center; 
+	text-align:center;
 	margin-top:45%;
 }
 
@@ -362,7 +362,7 @@ article a
 {
 	margin-top:9%;
 	margin-left:3%;
-	
+
 }
 
 #prev_sponsors span
@@ -412,7 +412,7 @@ article a
 {
 	color:#000;
 	text-decoration:none;
-	
+
 }
 
 
@@ -426,7 +426,7 @@ article a
 	color:#fff;
 	border:2px solid #fff;
 	border-radius:10px;
-	
+
 }
 
 #cfp:hover
@@ -440,7 +440,7 @@ article a
 	margin: auto;
 	border-spacing:0;
 	width: 80%;
-	font-size:1.3em;	
+	font-size:1.3em;
 }
 .tgnew
 {
@@ -449,20 +449,20 @@ article a
 	border-spacing:0;
 	width: 100%;
 	height: 100%;
-	font-size:.3em;	
-}	
+	font-size:.3em;
+}
 .tgnew tr
 {
-	
+
 	height: 100%;
-		
-}	
+
+}
 .tgnew td
 {
-	
+
 	height: 100%;
-		
-}	
+
+}
 .tg td
 {
 	padding:10px 5px;
@@ -482,7 +482,7 @@ article a
 	word-break:normal;
 }
 
-#normalheight 
+#normalheight
 {
 	height: auto;
 }
@@ -490,13 +490,13 @@ article a
 td,th
 {
 	border-color:#aaa;
-	text-align:left; 
+	text-align:left;
 }
 
 th
 {
 	text-align:center;
-	color:#000; 
+	color:#000;
 	background-color:#f5f5f5;
 }
 
@@ -504,13 +504,13 @@ tr>td:first-child
 {
 	width:15%;
 	font-size:.75em;
-	text-align:center; 
-	background-color:#f5f5f5; 
+	text-align:center;
+	background-color:#f5f5f5;
 	color:#333;
 }
 tr>td>span{
 	color:#555;
-	font-size:0.8em; 
+	font-size:0.8em;
 }
 
 td>a
@@ -521,23 +521,30 @@ td>a
 
 .yellow
 {
-	background-color:#fcf4bb; 
+	background-color:#fcf4bb;
+	text-align:center;
+	color: #000;
 }
 
 .red
 {
 	background-color:#fcd4bd;
+	text-align:center;
+	color: #000;
 }
 
 .blue
 {
 	background-color:#def9df;
-	text-align:center;  
+	text-align:center;
+	color: #000;
 }
 
 .green
 {
-	background-color:#a3f59d; 
+	background-color:#a3f59d;
+	text-align:center; 
+	color: #000;
 }
 
 #legend
