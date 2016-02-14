@@ -787,6 +787,7 @@ form.news-letter .btn:hover{
 	border-top:0px solid transparent;
 	padding-top: 20px;
 	border-color: #000;
+	color: #000;
 }
 #contact-form  .btn{
 	font-size:50px;
