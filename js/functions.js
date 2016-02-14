@@ -3,7 +3,9 @@
 -------------------------------------------------------------------*/
 var  pageTopImage = jQuery('#page-top').data('background-image');
 
-if (pageTopImage) {  jQuery('#page-top').css({ 'background-image':'url(' + pageTopImage + ')' }); };
+if (pageTopImage) {
+	jQuery('#page-top').css({ 'background-image':'url(' + pageTopImage + ')' });
+};
 jQuery('#about').css({ 'background-color':'#3498db' });
 jQuery('#speakers').css({ 'background-color':'#fff' });
 jQuery('#schedule').css({ 'background-color':'#3498db' });
@@ -94,21 +96,27 @@ jQuery(document).ready(function($) {
 	-------------------------------------------------------------------*/
 	$('.next-section .go-to-about').click(function() {
     	$('html,body').animate({scrollTop:$('#about').offset().top}, 1000);
+			$('#main-menu #headernavigation').css({'background':'rgba(0,0,0,.5)'});
   	});
   	$('.next-section .go-to-speakers').click(function() {
     	$('html,body').animate({scrollTop:$('#speakers').offset().top}, 1000);
+			$('#main-menu #headernavigation').css({'background':'rgba(0,0,0,.5)'});
   	});
   	$('.next-section .go-to-contact').click(function() {
     	$('html,body').animate({scrollTop:$('#contact').offset().top}, 1000);
+			$('#main-menu #headernavigation').css({'background':'rgba(0,0,0,.5)'});
   	});
   	$('.next-section .go-to-page-top').click(function() {
     	$('html,body').animate({scrollTop:$('#page-top').offset().top}, 1000);
+			$('#main-menu #headernavigation').css({'background':'rgba(255,255,255,.5)'});
   	});
 		$('.next-section .go-to-schedule').click(function() {
 	    	$('html,body').animate({scrollTop:$('#schedule').offset().top}, 1000);
+				$('#main-menu #headernavigation').css({'background':'rgba(0,0,0,.5)'});
 	  	});
 			$('.next-section .go-to-reachus').click(function() {
 		    	$('html,body').animate({scrollTop:$('#reachus').offset().top}, 1000);
+					$('#main-menu #headernavigation').css({'background':'rgba(0,0,0,.5)'});
 		  	});
 
   	/* Next Section End
@@ -230,3 +238,13 @@ $(window).load(function () {
 /* E-Mail HotLink Protection Script */
 $(document).ready(function(){for(var j=1;j<=16;j++){var t1 = "qq" + j;document.getElementById(t1).onclick();}})
 function backwards(e){return e.split("").reverse().join("")}function reveal(e,n,r,t){var a=backwards(e),d=backwards(t),c=d+a,i=document.createElement("a");i.innerHTML=a,i.href=c;var l=document.getElementById(n),m=document.getElementById(r);m.removeChild(l),m.appendChild(i)}
+
+$( window ).scroll(function() {
+	var $focused = $(':focus');
+	if($focused == '#page-top'){
+		$('#main-menu #headernavigation').css({'background':'rgba(255,255,255,.5)'});
+	}
+	else{
+		$('#main-menu #headernavigation').css({'background':'rgba(0,0,0,.5)'});
+	}
+});
