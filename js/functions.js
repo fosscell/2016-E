@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
 	/* Time Countdown
 	-------------------------------------------------------------------*/
 	var today = new Date();
-	var fm16 = new Date(today.getFullYear(),1,26,16);
+	var fm16 = new Date(today.getFullYear(),1,25,15);
 
 	var one_sec = 1000;
 	var secl = Math.ceil((fm16.getTime()-today.getTime())/one_sec);
@@ -90,8 +90,6 @@ jQuery(document).ready(function($) {
 
 	    });
 
-
-
 	/* Next Section
 	-------------------------------------------------------------------*/
 	$('.next-section .go-to-about').click(function() {
@@ -115,12 +113,6 @@ jQuery(document).ready(function($) {
 
   	/* Next Section End
 	-------------------------------------------------------------------*/
-
-
-
-
-
-
 
 	/* Contact
 	-------------------------------------------------------------------*/
@@ -216,16 +208,8 @@ jQuery(document).ready(function($) {
     }
   }
 
-
 	/* Contact End
 	-------------------------------------------------------------------*/
-
-
-
-
-
-
-
 
 });
 

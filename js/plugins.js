@@ -9,11 +9,6 @@
 /* Bootstrap v3.1.1 - bootstrap.min.js  end
 -----------------------------------------------------------------------------*/
 
-
-
-
-
-
 /*
  * jQuery One Page Nav Plugin
  * http://github.com/davist11/jQuery-One-Page-Nav
@@ -66,53 +61,53 @@
 
 		init: function() {
 			var self = this;
-			
+
 			// Introduce defaults that can be extended either
 			// globally or using an object literal.
 			self.config = $.extend({}, self.defaults, self.options, self.metadata);
-			
+
 			//Filter any links out of the nav
 			if(self.config.filter !== '') {
 				self.$nav = self.$nav.filter(self.config.filter);
 			}
-			
+
 			//Handle clicks on the nav
 			self.$nav.on('click.onePageNav', $.proxy(self.handleClick, self));
 
 			//Get the section positions
 			self.getPositions();
-			
+
 			//Handle scroll changes
 			self.bindInterval();
-			
+
 			//Update the positions on resize too
 			self.$win.on('resize.onePageNav', $.proxy(self.getPositions, self));
 
 			return this;
 		},
-		
+
 		adjustNav: function(self, $parent) {
 			self.$elem.find('.' + self.config.currentClass).removeClass(self.config.currentClass);
 			$parent.addClass(self.config.currentClass);
 		},
-		
+
 		bindInterval: function() {
 			var self = this;
 			var docHeight;
-			
+
 			self.$win.on('scroll.onePageNav', function() {
 				self.didScroll = true;
 			});
-			
+
 			self.t = setInterval(function() {
 				docHeight = self.$doc.height();
-				
+
 				//If it was scrolled
 				if(self.didScroll) {
 					self.didScroll = false;
 					self.scrollChange();
 				}
-				
+
 				//If the document height changes
 				if(docHeight !== self.docHeight) {
 					self.docHeight = docHeight;
@@ -120,17 +115,17 @@
 				}
 			}, 250);
 		},
-		
+
 		getHash: function($link) {
 			return $link.attr('href').split('#')[1];
 		},
-		
+
 		getPositions: function() {
 			var self = this;
 			var linkHref;
 			var topPos;
 			var $target;
-			
+
 			self.$nav.each(function() {
 				linkHref = self.getHash($(this));
 				$target = $('#' + linkHref);
@@ -141,7 +136,7 @@
 				}
 			});
 		},
-		
+
 		getSection: function(windowPos) {
 			var returnValue = null;
 			var windowHeight = Math.round(this.$win.height() * this.config.scrollThreshold);
@@ -151,28 +146,28 @@
 					returnValue = section;
 				}
 			}
-			
+
 			return returnValue;
 		},
-		
+
 		handleClick: function(e) {
 			var self = this;
 			var $link = $(e.currentTarget);
 			var $parent = $link.parent();
 			var newLoc = '#' + self.getHash($link);
-			
+
 			if(!$parent.hasClass(self.config.currentClass)) {
 				//Start callback
 				if(self.config.begin) {
 					self.config.begin();
 				}
-				
+
 				//Change the highlighted nav item
 				self.adjustNav(self, $parent);
-				
+
 				//Removing the auto-adjust on scroll
 				self.unbindInterval();
-				
+
 				//Scroll to the correct position
 				$.scrollTo(newLoc, self.config.scrollSpeed, {
 					axis: 'y',
@@ -185,10 +180,10 @@
 						if(self.config.changeHash) {
 							window.location.hash = newLoc;
 						}
-						
+
 						//Add the auto-adjust on scroll back in
 						self.bindInterval();
-						
+
 						//End callback
 						if(self.config.end) {
 							self.config.end();
@@ -199,21 +194,21 @@
 
 			e.preventDefault();
 		},
-		
+
 		scrollChange: function() {
 			var windowTop = this.$win.scrollTop();
 			var position = this.getSection(windowTop);
 			var $parent;
-			
+
 			//If the position is set
 			if(position !== null) {
 				$parent = this.$elem.find('a[href$="#' + position + '"]').parent();
-				
+
 				//If it's not already the current section
 				if(!$parent.hasClass(this.config.currentClass)) {
 					//Change the highlighted nav item
 					this.adjustNav(this, $parent);
-					
+
 					//If there is a scrollChange callback
 					if(this.config.scrollChange) {
 						this.config.scrollChange($parent);
@@ -221,7 +216,7 @@
 				}
 			}
 		},
-		
+
 		unbindInterval: function() {
 			clearInterval(this.t);
 			this.$win.unbind('scroll.onePageNav');
@@ -235,7 +230,7 @@
 			new OnePageNav(this, options).init();
 		});
 	};
-	
+
 })( jQuery, window , document );
 
 
@@ -266,22 +261,22 @@
 
 
 
-/*  countdown.min.js 
+/*  countdown.min.js
 ------------------------------------------------------------------------------*/
 /*!
  * The Final Countdown for jQuery v2.0.2 (http://hilios.github.io/jQuery.countdown/)
  * Copyright (c) 2013 Edson Hilios
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
  * the Software without restriction, including without limitation the rights to
  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
  * the Software, and to permit persons to whom the Software is furnished to do so,
  * subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -310,33 +305,33 @@
  * to offer multiple easing options
  *
  * TERMS OF USE - jQuery Easing
- * 
- * Open source under the BSD License. 
- * 
+ *
+ * Open source under the BSD License.
+ *
  * Copyright © 2008 George McGinley Smith
  * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
+ *
+ * Redistributions of source code must retain the above copyright notice, this list of
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
+ * Redistributions in binary form must reproduce the above copyright notice, this list
+ * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
+ *
+ * Neither the name of the author nor the names of contributors may be used to endorse
  * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
 */
 
@@ -452,7 +447,7 @@ jQuery.extend( jQuery.easing,
 		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
 	},
 	easeInOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158; 
+		if (s == undefined) s = 1.70158;
 		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
 		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
 	},
@@ -479,33 +474,33 @@ jQuery.extend( jQuery.easing,
 /*
  *
  * TERMS OF USE - EASING EQUATIONS
- * 
- * Open source under the BSD License. 
- * 
+ *
+ * Open source under the BSD License.
+ *
  * Copyright © 2001 Robert Penner
  * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
+ *
+ * Redistributions of source code must retain the above copyright notice, this list of
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
+ * Redistributions in binary form must reproduce the above copyright notice, this list
+ * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
+ *
+ * Neither the name of the author nor the names of contributors may be used to endorse
  * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
 
@@ -524,17 +519,17 @@ jQuery.extend( jQuery.easing,
  * http://www.littlewebthings.com/projects/countdown/
  *
  * Copyright 2010, Vassilis Dourdounis
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in
  * all copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -552,7 +547,7 @@ jQuery.extend( jQuery.easing,
 		$.extend(config, options);
 
 		diffSecs = this.setCountDown(config);
-	
+
 		if (config.onComplete)
 		{
 			$.data($(this)[0], 'callback', config.onComplete);
@@ -622,7 +617,7 @@ jQuery.extend( jQuery.easing,
 			days = Math.floor(diffSecs/60/60/24);
 			weeks = Math.floor(diffSecs/60/60/24/7);
 		}
-		else 
+		else
 		{
 			days = Math.floor(diffSecs/60/60/24)%7;
 			weeks = Math.floor(diffSecs/60/60/24/7);
@@ -640,8 +635,8 @@ jQuery.extend( jQuery.easing,
 			e = $this;
 			t = setTimeout(function() { e.doCountDown(id, diffSecs-1) } , 1000);
 			$.data(e[0], 'timer', t);
-		} 
-		else if (cb = $.data($this[0], 'callback')) 
+		}
+		else if (cb = $.data($this[0], 'callback'))
 		{
 			$.data($this[0], 'callback')();
 		}
@@ -650,7 +645,7 @@ jQuery.extend( jQuery.easing,
 
 	$.fn.dashChangeTo = function(id, dash, n, duration) {
 		  $this = $('#' + id);
-		 
+
 		  for (var i=($this.find('.' + dash + ' .digit').length-1); i>=0; i--)
 		  {
 				var d = n%10;
@@ -675,7 +670,7 @@ jQuery.extend( jQuery.easing,
 				$(digit + ' div.bottom').css({'display': 'block', 'height': ''});
 				$(digit + ' div.top').hide().slideUp(10);
 
-			
+
 			});
 		}
 	};
@@ -684,4 +679,3 @@ jQuery.extend( jQuery.easing,
 
 /*  jquery.lwtCountdown-1.0 End
 ------------------------------------------------------------------------------*/
-

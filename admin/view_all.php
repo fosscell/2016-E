@@ -16,7 +16,7 @@ if (!$validated) {
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes" /><link rel="shortcut icon" type="image/png" href="logo16.png" /><title>FOSSMeet '16</title><link rel="stylesheet" href="payment.css">
+<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes" /><link rel="shortcut icon" type="image/png" href="//fossmeet.in/images/logo16.png" /><title>FOSSMeet '16</title><link rel="stylesheet" href="//fossmeet.in/css/payment.css">
 </head>
 <body>
 <?php

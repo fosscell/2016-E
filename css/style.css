@@ -36,10 +36,10 @@ a:focus{
 	background:rgba(0,0,0,.5) url(../images/pattern.png);
 }
 #speakers > .pattern{
-	background:rgba(0,0,0,.5) url(../images/pattern.png);
+	color: #000;
 }
 #contact > .pattern{
-	background:rgba(0,0,0,.5) url(../images/pattern.png);
+	color: #000;
 }
 .pattern{
 	padding-top:100px;
@@ -269,19 +269,19 @@ a:focus{
 /* 2.3 - Placeholder color
 ------------------------------------------ */
 .form-control::-webkit-input-placeholder {
-   color: #ffffff;
+   color: #000;
 }
 
 .form-control:-moz-placeholder {
-   color: #ffffff;
+   color: #000;
 }
 
 .form-control::-moz-placeholder {
-   color: #ffffff;
+   color: #000;
 }
 
 .form-control:-ms-input-placeholder{
-	color:#ffffff;
+	color:#000;
 }
 /* 2.3 - Placeholder color End
 ------------------------------------------ */
@@ -317,7 +317,7 @@ a:focus{
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus{
-	color:#fff;
+	color:#000;
 	background-color:transparent;
 }
 .navbar-default{
@@ -764,9 +764,13 @@ form.news-letter .btn:hover{
 #contact-form{
 	margin-top:70px;
 	margin-bottom:10px;
+
 }
+
 #contact-form  input{
 	height:60px;
+	color: #000;
+	border-color: #000;
 }
 #contact-form #first_name{
 	border-right:0px solid transparent;
@@ -782,11 +786,12 @@ form.news-letter .btn:hover{
 	height:130px;
 	border-top:0px solid transparent;
 	padding-top: 20px;
+	border-color: #000;
 }
 #contact-form  .btn{
 	font-size:50px;
 	height:130px;
-	border:1px solid #fff;
+	border:1px solid #000;
 	border-left:0px solid transparent;
 	border-top:0px solid transparent;
 }
@@ -802,7 +807,7 @@ form.news-letter .btn:hover{
 .contact-email-error,
 .contact-subject-error,
 .contact-message-error{
-	color: #ffffff;
+	color: #000;
 	position: absolute;
 	background: rgba(52, 152, 219,1);
 	display: none;
