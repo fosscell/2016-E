@@ -1,0 +1,321 @@
+-media screen and (min-width: 640px) {
+ 	.effect-hera > img {
+    		width: 915px;
+       	height: 600px;
+       	margin: auto;
+ 	}
+ }
+ @media screen and (max-width: 640px) {
+ 	.effect-hera > img {
+       	height: auto;
+       	margin: auto;
+ 	}
+ }
+ 
+.fa{
+	cursor: pointer;
+}
+
+.overlay,.front,.back{
+    position: absolute;
+    top:0;
+    left:0;
+    min-height: 100vh;
+    width:100%;
+    background-position: fixed;
+    background-size: cover;
+}
+.overlay{
+
+    z-index: -1;
+    background: rgba(0,0,0,.7);
+}
+.front{
+    z-index: -2;
+    background-image: url('../img/c.jpg');
+}
+
+.logohead{
+  position: relative;
+	margin: 0px;
+    padding: 4% 0px 10px;
+}
+
+#loading {
+    position:absolute;
+    width:300px;
+    top:50px;
+    left:50%;
+    margin-left:-150px;
+    text-align:center;
+    padding: 10px;
+    font:bold 11px Arial, Helvetica, sans-serif;
+    background: #222222;
+    color: #ffffff;
+    z-index: 99;
+}
+
+#contact{
+	background: #FEFF99;
+	font-family: 'ubuntu';
+}
+
+header{
+    background: none;
+    font-family: 'ubuntu';
+    color: #F05F40;
+}
+header h1{
+    margin:0;
+    padding: 0;
+    /*line-height: 100vh;*/
+    padding-top: 0%;
+    padding-bottom: 10px;
+    font-family: 'ubuntu';
+    color: #F05F40;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 15px 45%;
+	width: 90%;
+	height: auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+figure.effect-hera h2 {
+	font-size: 1.3em;
+}
+
+figure.effect-hera h2,
+figure.effect-hera p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50%,-50%,0);
+	transform: translate3d(-50%,-50%,0);
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+}
+
+figure.effect-hera figcaption::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 5em;
+	height: 5em;
+	border: 2px solid #fff;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(0,0,1);
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+}
+
+figure.effect-hera p {
+	width: 100px;
+	text-transform: none;
+	font-size: 121%;
+	line-height: 2;
+}
+
+figure.effect-hera p a {
+	color: #fff;
+}
+
+figure.effect-hera p a:hover,
+figure.effect-hera p a:focus {
+	opacity: 0.6;
+}
+
+figure.effect-hera p a span {
+	opacity: 0;
+	font-size: 1.5em;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-hera:hover figcaption::before {
+	opacity: 1;
+	-webkit-transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+	transform: translate3d(-50%,-50%,0) rotate3d(0,0,1,-45deg) scale3d(1,1,1);
+}
+
+figure.effect-hera:hover h2 {
+	opacity: 0;
+	-webkit-transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+	transform: translate3d(-50%,-50%,0) scale3d(0.8,0.8,1);
+}
+
+figure.effect-hera:hover p span:empty {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0); /* just because it's stronger than nth-child */
+	opacity: 1;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(../fonts/sDGTilo5QRsfWu6Yc11AXg.woff2) format('woff2');
+}
+
+.time-count-container{
+  min-height: 200;
+  margin-top:30px;
+}
+.time-box{
+	width:100px;
+	height:100px;
+	display:table;
+	border:1px solid #fff;
+	margin:20px auto;
+
+	-webkit-border-radius:50%;
+	   -moz-border-radius:50%;
+	    -ms-border-radius:50%;
+	     -o-border-radius:50%;
+	        border-radius:50%;
+
+	-webkit-transform:rotate(45deg);
+	   -moz-transform:rotate(45deg);
+	    -ms-transform:rotate(45deg);
+	     -o-transform:rotate(45deg);
+	        transform:rotate(45deg);
+}
+.time-box-inner{
+	width:150px;
+	height:150px;
+	display:table;
+	text-align:center;
+
+	-webkit-transform:rotate(-45deg);
+	   -moz-transform:rotate(-45deg);
+	    -ms-transform:rotate(-45deg);
+	     -o-transform:rotate(-45deg);
+	        transform:rotate(-45deg);
+}
+.time-number{
+	font-size:65px;
+	width:100%;
+	display:inline-block;
+	font-weight:300;
+	padding-top: 15%;
+
+
+	-webkit-transition:all .25s;
+	   -moz-transition:all .25s;
+	    -ms-transition:all .25s;
+	     -o-transition:all .25s;
+	        transition:all .25s;
+}
+.time-number .digit{
+	line-height: 60px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.time-name{
+	font-size:15px;
+	text-transform:uppercase;
+	font-weight:700;
+}
+.time-until{
+	text-align:center;
+	margin:0;
+}
+.time-until > span > a{
+  text-decoration: none;
+}
+.time-until span{
+	color: #fff;
+	font-size:18px;
+	line-height:40px;
+	display:inline-block;
+	background-color:#3498db;
+	text-transform:uppercase;
+	padding:0px 15px;
+}
+
