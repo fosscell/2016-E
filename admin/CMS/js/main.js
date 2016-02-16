@@ -40,8 +40,7 @@ if(name == null || name == "" || email == null || email == "" || phoneno == null
 }
 
 function get_name_reg_users(){
-  var typeofregE = document.getElementById('typeofreg');
-  var typeofregD = typeofregE.value;
+  var typeofregD = "A";
   var parti_nameE = document.getElementById('parti_name');
   var parti_nameD = "";
   var xhttp = new XMLHttpRequest();
@@ -50,8 +49,7 @@ function get_name_reg_users(){
       var response = xhttp.responseText;
       var A = response.split(',');
       for(var i=0;i<A.length;i++){
-	var individual = A[i].split(';');
-console.log(individual);
+	    var individual = A[i].split(';');
         if(individual.length == 2){
           var id = individual[1];
           var name = individual[0];

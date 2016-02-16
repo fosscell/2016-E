@@ -19,9 +19,9 @@
   <div class="col-full">
     <p>
       &copy; 2016 - CMS built with ❤  by
-      <a data-toggle="modal" data-target="#abtInfo">
+      
         Creative and Intellectual Minds of NIT, Calicut
-      </a>
+      
 
     </p>
   </div>

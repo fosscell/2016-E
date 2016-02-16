@@ -1,17 +1,10 @@
 <?php
 require_once("global.php");
 /*
-INPUT: typeofreg
+INPUT: nothing
 OUTPUT: csv((name,value))
 */
-$tor = $_REQUEST['typeofreg'];
-$tablename = "none";
-if($tor == 'OTSR'){
-  $tablename = "otsr_responses";
-}
-else if($tor == 'ONLINE'){
-  $tablename = "instamojo_responses";
-}
+$tablename = "instamojo_responses";
 $ret = "";
 $qry = "SELECT id,buyer_name FROM $tablename;";
 $result = $mysqli->query($qry);

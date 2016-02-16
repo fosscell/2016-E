@@ -75,37 +75,6 @@ LOCK TABLES `instamojo_responses` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `otsr_responses`
---
-
-DROP TABLE IF EXISTS `otsr_responses`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `otsr_responses` (
-  `ID` varchar(32) NOT NULL,
-  `PHONE_NUMBER` varchar(10) NOT NULL,
-  `E_MAIL` varchar(100) NOT NULL,
-  `BUYER_NAME` varchar(100) NOT NULL,
-  `AMOUNT_PAID` int(11) NOT NULL,
-  `modified_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `FOOD_PREFS` varchar(100) NOT NULL,
-  `T_SHIRTS` char(1) NOT NULL,
-  `ORG_NAME` varchar(500) NOT NULL,
-  `TSHIRT_SPEC` varchar(10) NOT NULL,
-  PRIMARY KEY (`ID`,`modified_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `otsr_responses`
---
-
-LOCK TABLES `otsr_responses` WRITE;
-/*!40000 ALTER TABLE `otsr_responses` DISABLE KEYS */;
-/*!40000 ALTER TABLE `otsr_responses` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `verifier`
 --
 
@@ -114,7 +83,6 @@ DROP TABLE IF EXISTS `verifier`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `verifier` (
   `FOSSMeet_ID` varchar(12) NOT NULL,
-  `TYPE_OF_REG` enum('OTSR','ONLINE','SPNSR','OTHERS') NOT NULL,
   `O_REG_ID` varchar(32) NOT NULL,
   PRIMARY KEY (`FOSSMeet_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
