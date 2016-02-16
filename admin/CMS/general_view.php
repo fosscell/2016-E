@@ -44,9 +44,14 @@ require_once("header.php");
 
 	<div class="col-xs-6">
 			<h3>verify users</h3>
+
+<script>
+get_name_reg_users();
+</script>
+
 			<form method="POST" name="verifyusers" id="verifyusers">
 				
-				<select name="parti_name" id="parti_name" onload="get_name_reg_users()">
+				<select name="parti_name" id="parti_name">
 					<option value="NA">Not Available</option>
 				</select>
 

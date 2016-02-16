@@ -40,12 +40,10 @@ if(name == null || name == "" || email == null || email == "" || phoneno == null
 }
 
 function get_name_reg_users(){
-  var typeofregD = "A";
-  var parti_nameE = document.getElementById('parti_name');
-  var parti_nameD = "";
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
+      var parti_nameD = "";
       var response = xhttp.responseText;
       var A = response.split(',');
       for(var i=0;i<A.length;i++){
@@ -56,11 +54,9 @@ function get_name_reg_users(){
           parti_nameD = parti_nameD + "<option value='"+id+"'>"+name+"</option>";
         }
       }
-      parti_nameE.innerHTML = parti_nameD;
+      document.getElementById('parti_name').innerHTML = parti_nameD;
     }
   }
-  var formData = "typeofreg="+typeofregD;
-  xhttp.open("POST", "list_reg_users.php", true);
-  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  xhttp.send(formData);
+  xhttp.open("GET", "list_reg_users.php", true);
+  xhttp.send();
 }
