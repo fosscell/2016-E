@@ -12,11 +12,30 @@
     <title>FOSSMeet '16</title>
 
     <link rel="stylesheet" href="css/payment.css">
+<style>
+#instructions{display: -webkit-flex;display: -ms-flexbox;display: flex;}
+</style>
 
 </head>
 <body>
 
 <h3 style="text-align:center;">Online Registrations</h3>
+
+    <div class="row">
+
+<li class="columns small-6 clear">
+<div class="text-hint" id="instructions">
+<h4>Instructions</h4>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</li>
+
+</div>
 
 <form method="POST" action="admin/payment.php" id="payment_form" onsubmit="return validateForm()" name="payment_form" parsley-validate novalidate>
 

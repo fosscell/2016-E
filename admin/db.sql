@@ -96,6 +96,20 @@ LOCK TABLES `verifier` WRITE;
 /*!40000 ALTER TABLE `verifier` DISABLE KEYS */;
 /*!40000 ALTER TABLE `verifier` ENABLE KEYS */;
 UNLOCK TABLES;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ws_prefs`
+--
+
+CREATE TABLE IF NOT EXISTS `ws_prefs` (
+  `MOJO_ID` varchar(20) NOT NULL,
+  `PREFS` varchar(100) NOT NULL,
+  PRIMARY KEY (`MOJO_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

@@ -20,7 +20,9 @@ if(isset($_POST['fm16_pay_btn'])){
         "email" => $email,
         "buyer_name" => $name,
         "phone" => $phoneno,
-        "send_sms" => false
+        "send_sms" => false,
+        "redirect_url" => "http://fossmeet.in/preference.html",
+        "allow_repeated_payments" => false
         ));
   }
   catch (Exception $e) {
