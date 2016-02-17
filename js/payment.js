@@ -13,7 +13,9 @@ if(name == null || name == "" || email == null || email == "" || phoneno == null
 }
 }
 
-function ws_prefs(opt){
+function ws_prefs(siht,opt){
+
+	var sqw = parseInt(siht[6]);
 
 	var contains = function(needle) {
 		// Per spec, the way to identify NaN is that it is not equal to itself
@@ -43,17 +45,15 @@ function ws_prefs(opt){
 	var seld = opt;
 
 	for(var i=0;i<=9;i++){
-		//console.log("t"+i);
 		var ifc = contains.call(t[i],seld);
 		if(ifc == true){
-			console.log(t[i]);
 			for(var j=0;j<t[i].length;j++){
-				if(t[j] == seld){
+				if((t[i][j] == seld) /*|| (j == sqw)*/){
 					continue;
-					console.log('c');
 				}
 				else{
-					var r = document.getElementsByClassName(t[j]);
+					var r = document.getElementsByClassName(t[i][j]);
+					console.log(r);
 					for(var k=0;k<r.length;k++){
 						r[k].remove();
 					}
