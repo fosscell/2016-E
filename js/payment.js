@@ -38,13 +38,6 @@ function ws_prefs(opt){
 		return indexOf.call(this, needle) > -1;
 	};
 
-	function remove(yourclassname){
-		var list = document.getElementsByClassName(yourclassname);
-		for(var i = list.length - 1; 0 <= i; i--)
-		if(list[i] && list[i].parentElement)
-		list[i].parentElement.removeChild(list[i]);
-	}
-
 	var t = [["29", "1", "27"],["16", "1", "SUMOHAN"],["16", "1", "30"],["2", "11", "9"],["2", "11", "22"],["19", "13", "24"],["19", "13", "42"],["205", "13", "36"],["MEDIAWIKI", "43", "CONCUR"],["MEDIAWIKI", "43", "40"]];
 
 	var seld = opt;
@@ -60,8 +53,10 @@ function ws_prefs(opt){
 					console.log('c');
 				}
 				else{
-					remove(t[j]);
-					console.log('r');
+					var r = document.getElementsByClassName(t[j]);
+					for(var k=0;k<r.length;k++){
+						r[k].remove();
+					}
 				}
 			}
 		}
