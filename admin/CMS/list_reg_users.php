@@ -1,5 +1,6 @@
 <?php
 require_once("global.php");
+if(isset($_SESSION['username'])){
 /*
 INPUT: nothing
 OUTPUT: csv((name,value))
@@ -17,4 +18,8 @@ else{
   $ret .= "error";
 }
 echo $ret;
+}
+else{
+  echo "invalid data!";
+}
 ?>

@@ -1,5 +1,6 @@
 <?php
 require_once("global.php");
+if(isset($_SESSION['username'])){
     if(isset($_REQUEST['insertnewusers'])){
                 $username = $_REQUEST['username'];
                 $passhash = md5($_REQUEST['password']);
@@ -14,5 +15,5 @@ require_once("global.php");
     else{
         echo "unknown";
     }
+}
 ?>
-
