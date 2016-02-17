@@ -14,7 +14,7 @@ if(name == null || name == "" || email == null || email == "" || phoneno == null
 }
 
 function ws_prefs(opt){
-	
+
 	var contains = function(needle) {
 		// Per spec, the way to identify NaN is that it is not equal to itself
 		var findNaN = needle !== needle;
@@ -37,71 +37,33 @@ function ws_prefs(opt){
 
 		return indexOf.call(this, needle) > -1;
 	};
-	
-	var t0 = ["29", "1", "27"];
-	var t1 = ["16", "1", "SUMOHAN"];
-	var t2 = ["16", "1", "30"];
-	var t3 = ["2", "11", "9"];
-	var t4 = ["2", "11", "22"];
-	var t5 = ["19", "13", "24"];
-	var t6 = ["19", "13", "42"];
-	var t7 = ["205", "13", "36"];
-	var t8 = ["MEDIAWIKI", "43", "CONCUR"];
-	var t9 = ["MEDIAWIKI", "43", "40"];
-	
-	var seld = document.getElementById(opt).value;
-	
+
+	function remove(yourclassname){
+		var list = document.getElementsByClassName(yourclassname);
+		for(var i = list.length - 1; 0 <= i; i--)
+		if(list[i] && list[i].parentElement)
+		list[i].parentElement.removeChild(list[i]);
+	}
+
+	var t = [["29", "1", "27"],["16", "1", "SUMOHAN"],["16", "1", "30"],["2", "11", "9"],["2", "11", "22"],["19", "13", "24"],["19", "13", "42"],["205", "13", "36"],["MEDIAWIKI", "43", "CONCUR"],["MEDIAWIKI", "43", "40"]];
+
+	var seld = opt;
+
 	for(var i=0;i<=9;i++){
-		console.log("t"+i);
-		var ifc = contains.call("t"+i,seld);
+		//console.log("t"+i);
+		var ifc = contains.call(t[i],seld);
 		if(ifc == true){
-			console.log("t"+i);
-			break;
+			console.log(t[i]);
+			for(var j=0;j<t[i].length;j++){
+				if(t[j] == seld){
+					continue;
+					console.log('c');
+				}
+				else{
+					remove(t[j]);
+					console.log('r');
+				}
+			}
 		}
 	}
-	
-	/*
-	switch(opt){
-		case 0:
-		
-		break;
-		
-		case 1:
-		
-		break;
-		
-		case 2:
-		
-		break;
-		
-		case 3:
-		
-		break;
-		
-		case 4:
-		
-		break;
-		
-		case 5:
-		
-		break;
-		
-		case 6:
-		
-		break;
-		
-		case 7:
-		
-		break;
-		
-		case 8:
-		
-		break;
-		
-		case 9:
-		
-		break;
-		
-	}
-	*/
 }
