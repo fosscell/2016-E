@@ -1,0 +1,35 @@
+.logohead{
+	padding-top: 5%;
+}
+@media screen and (min-width: 660px) and (max-width: 720px) {
+	.logohead{
+		padding-top: 25%;
+	}
+	#time_countdown{
+		padding-top: 15%;
+	}
+}
+@media screen and (min-width: 480px) and (max-width: 660px) {
+	.logohead{
+		padding-top: 30%;
+	}
+	#time_countdown{
+		padding-top: 15%;
+	}
+	.tg{
+		width: 100%;
+	}
+	/*#myTab{
+		display: none;
+	}*/
+	
+}
+@media screen and (max-width: 480px) {
+	.logohead{
+		padding-top: 15%;
+	}
+	/*#myTab{
+		display: none;
+	}*/
+}
+/*above */
