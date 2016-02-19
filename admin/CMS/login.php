@@ -21,14 +21,14 @@ if (!isset($_POST['submit'])) {
 ?>
 				<form method="POST">
 					<li>
-						<input type="text" id="name" name="name" class="text" value="User Name">
+						<input type="text" id="name" name="name" class="text" value="">
 					</li>
 					<li>
-						<input type="password" name="password" value="Password">
+						<input type="password" name="password" value="">
 					</li>
 
 					 <div class ="forgot">
-						<input type="submit" name="submit" value="Log In" > <a href="#" class=" icon arrow"></a>                                                                                                                                                                                                                                 </h4>
+						<input type="submit" name="submit" value="Log In" >
 					</div>
 				</form>
 				<?php
@@ -56,10 +56,10 @@ if (!isset($_POST['submit'])) {
 ?>
 						<form method="POST">
 							<li>
-								<input type="text" id="name" name="name" class="text" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" >
+								<input type="text" id="name" name="name" class="text" value="">
 							</li>
 							<li>
-								<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+								<input type="password" name="password" value="">
 							</li>
 
 							 <div class ="forgot">
