@@ -7,6 +7,5 @@ require_once("global.php");
 $_SESSION = array();
 // Finally, destroy the session.
 session_destroy();
-header("Location: index.php");
+header("Location: login.php");
 ?>
-
