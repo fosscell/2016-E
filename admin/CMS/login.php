@@ -1,72 +1,86 @@
 <?php
 require_once("global.php");
 ?>
-<?php
-require_once("header.php");
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FOSSMeet '16 :: CMS</title>
+		<meta charset="utf-8">
+		<link href="css/login.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+				 <!-- start-main -->
+				<div class="login-form">
+						<h1>Sign In</h1>
+						<?php
+
+if (!isset($_POST['submit'])) {
 ?>
+				<form method="POST">
+					<li>
+						<input type="text" id="name" name="name" class="text" value="User Name">
+					</li>
+					<li>
+						<input type="password" name="password" value="Password">
+					</li>
 
-		<section class="row">
-			<div>
-
-				<?php
-					if(!isset($_POST['password'])){
-				?>
-				<form name="loginFrm" action="" method="POST">
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input class="mdl-textfield__input" type="text" id="username" name="username" />
-						<label class="mdl-textfield__label" for="username">Enter your Login ID</label>
+					 <div class ="forgot">
+						<input type="submit" name="submit" value="Log In" > <a href="#" class=" icon arrow"></a>                                                                                                                                                                                                                                 </h4>
 					</div>
-
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input class="mdl-textfield__input" type="password" id="password" name="password" />
-						<label class="mdl-textfield__label" for="password">Enter your secret Password</label>
-					</div>
-
-					<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" type="Submit"><i class="material-icons">-></i></button><br>
 				</form>
 				<?php
-					}
-					else{
-						$username = $_POST['username'];
-						$password = md5($_POST['password']);
-						$sqlquery1 = "SELECT * FROM AUTH_USERS WHERE ADMIN_ID = '" . $username . "' AND PASSWORD = '" . $password . "';";
+} else {
 
-		    				$result1 = $mysqli->query($sqlquery1);
+    $username = $_POST['name'];
+    $password = md5($_POST['password']);
 
-    				if ($result1->num_rows == 1) {
-        			$row = $result1->fetch_assoc();
-							// this is the admin login
-						  // set session and header
-							$_SESSION['username'] = $row['ADMIN_ID'];
-							header('Location: general_view.php');
-						}
-										else{
-										// no success
-										// invalid entry
-										// display the login form once again
-				?>
-				<div class="error message">
-					<p>invalid password</p>
-				</div>
-				<form name="loginFrm" action="" method="POST">
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-			<input class="mdl-textfield__input" type="text" id="username" name="username" />
-					<label class="mdl-textfield__label" for="username">Enter your Login ID</label>
-				</div>
-				<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				<input class="mdl-textfield__input" type="password" id="password" name="password" />
-					<label class="mdl-textfield__label" for="password">Enter your secret Password</label>
-					</div>
-				<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored" type="Submit"><i class="material-icons">-></i></button><br>
-				</form>
-				<?php
-					}
+    $sql_q = "SELECT * FROM AUTH_USERS WHERE ADMIN_ID = " . $username . " AND PASSWORD = '" . $password . "'";
+
+    $result = $mysqli->query($sql_q);
+
+    if ($result->num_rows == 1) {
+        $row             = $result->fetch_assoc();
+        $_SESSION['uid'] = $row['uid'];
+
+				if ($_SESSION['uid'] == '0'){
+					header("Location: admin.php");
 				}
-				?>
-
-			</div>
-		</section>
-
-<?php
-require_once("footer.php");
+				else if ($_SESSION['uid'] == 'reg'){
+        	header("Location: reg.php");
+				}
+    } else {
+        //echo "invalid login!";
 ?>
+						<form method="POST">
+							<li>
+								<input type="text" id="name" name="name" class="text" value="User Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User Name';}" >
+							</li>
+							<li>
+								<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+							</li>
+
+							 <div class ="forgot">
+
+								<input type="submit" value="Sign In" >
+							</div>
+						</form>
+						<?php
+    }
+}
+?>
+			</div>
+			<!--//End-login-form-->
+
+   				<div class="copy-right">
+							<footer>
+								<p>&copy; 2016 - CMS built with ❤  by Creative and Intellectual Minds of NIT, Calicut</p>
+							 </footer>
+					</div>
+
+
+</body>
+</html>

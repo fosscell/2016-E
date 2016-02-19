@@ -1,18 +1,8 @@
-
-function addnewuser_superactions(){
-  var username = document.getElementById('username').value;
-  var password = document.getElementById('password').value;
-  var insertnewusers = "";
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (xhttp.readyState == 4 && xhttp.status == 200) {
-      console.log(xhttp.responseText);
-    }
-  }
-  var formData = "?username="+username+"&password="+password+"&insertnewusers="+insertnewusers;
-  xhttp.open("POST", " addnewuser_superuser.php"+formData, true);
-  xhttp.send(formData);
-}
+<?php
+require_once("global.php");
+if ($_SESSION['uid'] == 'reg'){
+?>
+<script type="text/javascript">
 
 function get_name_reg_users(){
   var xhttp = new XMLHttpRequest();
@@ -36,6 +26,26 @@ function get_name_reg_users(){
   xhttp.send();
 }
 
-$(document).ready(function() {
-	get_name_reg_users();
-});
+</script>
+<h3>verify users</h3>
+
+<form method="POST" action="event_ticket.php" name="verifyusers" id="verifyusers">
+
+  <select name="parti_name" id="parti_name">
+    <option value="NA">Not Available</option>
+  </select>
+
+
+  <input type="Submit" value="GO!">
+
+</form>
+
+<script type="text/javascript">
+get_name_reg_users();
+</script>
+<?php
+}
+else{
+  echo "reg:: not logged in";
+}
+?>
