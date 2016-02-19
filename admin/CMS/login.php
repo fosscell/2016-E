@@ -17,7 +17,6 @@ require_once("global.php");
 				<div class="login-form">
 						<h1>Sign In</h1>
 						<?php
-
 if (!isset($_POST['submit'])) {
 ?>
 				<form method="POST">
@@ -44,7 +43,7 @@ if (!isset($_POST['submit'])) {
 
     if ($result->num_rows == 1) {
         $row             = $result->fetch_assoc();
-        $_SESSION['uid'] = $row['uid'];
+        $_SESSION['uid'] = $row['ADMIN_ID'];
 
 				if ($_SESSION['uid'] == '0'){
 					header("Location: admin.php");
