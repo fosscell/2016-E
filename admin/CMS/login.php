@@ -37,15 +37,14 @@ if (!isset($_POST['submit'])) {
     $username = $_POST['name'];
     $password = md5($_POST['password']);
 
-    $sql_q = "SELECT * FROM AUTH_USERS WHERE ADMIN_ID = " . $username . " AND PASSWORD = '" . $password . "';";
-echo "a";
+    $sql_q = "SELECT * FROM AUTH_USERS WHERE ADMIN_ID = '$username' AND PASSWORD = '$password' ;";
+
     $result = $mysqli->query($sql_q);
-var_dump($result);
-echo "b";
+
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         $_SESSION['uid'] = $row['ADMIN_ID'];
-echo "c";
+
 				if ($_SESSION['uid'] == '0'){
 					header("Location: admin.php");
 				}
