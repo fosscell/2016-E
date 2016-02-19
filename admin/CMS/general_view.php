@@ -51,7 +51,10 @@ require_once("header.php");
 					<option value="NA">Not Available</option>
 				</select>
 
-			<button name="verifyusers" type="button" target="_blank" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">-></i></button><br>
+
+        <input type="Submit" value="GO!">
+
+      <br>
 			</form>
 
 			</div>

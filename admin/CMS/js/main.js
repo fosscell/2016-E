@@ -1,13 +1,3 @@
-$(document).ready(function() {
-
-	$("body").addClass("loaded");
-
-	$(function () {
-		$('a[rel="lightbox"]').fluidbox();
-	})
-
-});
-
 
 function addnewuser_superactions(){
   var username = document.getElementById('username').value;
@@ -46,4 +36,6 @@ function get_name_reg_users(){
   xhttp.send();
 }
 
-get_name_reg_users();
+$(document).ready(function() {
+	get_name_reg_users();
+});
