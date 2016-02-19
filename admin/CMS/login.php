@@ -38,23 +38,23 @@ if (!isset($_POST['submit'])) {
     $password = md5($_POST['password']);
 
     $sql_q = "SELECT * FROM AUTH_USERS WHERE ADMIN_ID = " . $username . " AND PASSWORD = '" . $password . "';";
-
+echo "a";
     $result = $mysqli->query($sql_q);
-
-    //if ($result->num_rows == 1) {
+echo "b";
+    if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         $_SESSION['uid'] = $row['ADMIN_ID'];
-
+echo "c";
 				if ($_SESSION['uid'] == '0'){
 					header("Location: admin.php");
 				}
 				else if ($_SESSION['uid'] == 'reg'){
         	header("Location: reg.php");
 				}
-    //} else {
-        //echo "invalid login!";
+    } else {
+        echo "invalid login!";
 ?>
-				<!--		<form method="POST">
+						<form method="POST">
 							<li>
 								<input type="text" id="name" name="name" class="text" value="">
 							</li>
@@ -66,9 +66,9 @@ if (!isset($_POST['submit'])) {
 
 								<input type="submit" value="Sign In" >
 							</div>
-						</form> -->
+						</form>
 						<?php
-  //  }
+    }
 }
 ?>
 			</div>
