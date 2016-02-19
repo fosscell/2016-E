@@ -41,7 +41,7 @@ if (!isset($_POST['submit'])) {
 
     $result = $mysqli->query($sql_q);
 
-    if ($result->num_rows == 1) {
+    //if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
         $_SESSION['uid'] = $row['ADMIN_ID'];
 
@@ -51,10 +51,10 @@ if (!isset($_POST['submit'])) {
 				else if ($_SESSION['uid'] == 'reg'){
         	header("Location: reg.php");
 				}
-    } else {
+    //} else {
         //echo "invalid login!";
 ?>
-						<form method="POST">
+				<!--		<form method="POST">
 							<li>
 								<input type="text" id="name" name="name" class="text" value="">
 							</li>
@@ -66,9 +66,9 @@ if (!isset($_POST['submit'])) {
 
 								<input type="submit" value="Sign In" >
 							</div>
-						</form>
+						</form> -->
 						<?php
-    }
+  //  }
 }
 ?>
 			</div>
