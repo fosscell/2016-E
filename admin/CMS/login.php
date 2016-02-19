@@ -43,12 +43,12 @@ if (!isset($_POST['submit'])) {
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        $_SESSION['uid'] = $row['ADMIN_ID'];
+        $_SESSION['username'] = $row['ADMIN_ID'];
 
-				if ($_SESSION['uid'] == '0'){
+				if ($_SESSION['username'] == '0'){
 					header("Location: admin.php");
 				}
-				else if ($_SESSION['uid'] == 'reg'){
+				else if ($_SESSION['username'] == 'reg'){
         	header("Location: reg.php");
 				}
     } else {

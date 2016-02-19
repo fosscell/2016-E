@@ -1,6 +1,6 @@
 <?php
 require_once("global.php");
-if ($_SESSION['uid'] == '0'){
+if ($_SESSION['username'] == '0'){
 ?>
 <script type="text/javascript">
 

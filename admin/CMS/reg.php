@@ -1,6 +1,6 @@
 <?php
 require_once("global.php");
-if ($_SESSION['uid'] == 'reg'){
+if ($_SESSION['username'] == 'reg'){
 ?>
 <script type="text/javascript">
 
