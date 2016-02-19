@@ -40,6 +40,7 @@ if (!isset($_POST['submit'])) {
     $sql_q = "SELECT * FROM AUTH_USERS WHERE ADMIN_ID = " . $username . " AND PASSWORD = '" . $password . "';";
 echo "a";
     $result = $mysqli->query($sql_q);
+var_dump($result);
 echo "b";
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
