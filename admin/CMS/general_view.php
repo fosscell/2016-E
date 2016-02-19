@@ -45,17 +45,13 @@ require_once("header.php");
 	<div class="col-xs-6">
 			<h3>verify users</h3>
 
-<script>
-get_name_reg_users();
-</script>
+			<form method="POST" action="event_ticket.php" name="verifyusers" id="verifyusers">
 
-			<form method="POST" name="verifyusers" id="verifyusers">
-				
 				<select name="parti_name" id="parti_name">
 					<option value="NA">Not Available</option>
 				</select>
 
-			<button name="verifyusers" type="button" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">-></i></button><br>
+			<button name="verifyusers" type="button" target="_blank" class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored"><i class="material-icons">-></i></button><br>
 			</form>
 
 			</div>

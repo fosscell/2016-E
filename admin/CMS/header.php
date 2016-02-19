@@ -8,22 +8,17 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
      <script src="js/jquery.1.11.min.js"></script>
-     <script src="js/jquery.fluidbox.min.js"></script>
-     <script src="js/material.min.js"></script>
      <script src="js/bootstrap.min.js"></script>
      <script src="js/main.js"></script>
 
      <link rel="shortcut icon" type="image/png" href="img/blood.png" />
 
-     <link rel="stylesheet" href="css/fluidbox.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css">
      <link rel="stylesheet" href="css/main.css">
 
      <title>
        FOSSMeet '16 :: CMS
      </title>
-
-     <link rel="stylesheet" href="css/material.red-deep_orange.min.css">
-     <link rel="stylesheet" href="css/bootstrap.min.css">
 
   </head>
   <body>
