@@ -1,6 +1,8 @@
 .logohead{
 	padding-top: 5%;
 }
+/*Bootstrap upto 768*/
+/*This reduces to 600*/
 @media screen and (min-width: 660px) and (max-width: 720px) {
 	.logohead{
 		padding-top: 25%;
@@ -9,27 +11,16 @@
 		padding-top: 15%;
 	}
 }
-@media screen and (min-width: 480px) and (max-width: 660px) {
+@media screen and (max-width: 660px) {
 	.logohead{
-		padding-top: 30%;
+		padding-top: 200px;
 	}
 	#time_countdown{
 		padding-top: 15%;
 	}
-	.tg{
-		width: 100%;
-	}
-	/*#myTab{
-		display: none;
-	}*/
-	
-}
-@media screen and (max-width: 480px) {
-	.logohead{
-		padding-top: 15%;
-	}
+	.col-ts-12 {width: 100%; display: block; float: none;}
+	.tg{width: 100%;}
 	/*#myTab{
 		display: none;
 	}*/
 }
-/*above */
