@@ -45,7 +45,7 @@ if(isset($_POST['fm16_pay_btn'])){
   if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
   $qry = "INSERT INTO instamojo_responses VALUES('$id','$phoneno','$email','$name',$amount,'$purpose','$status','$s_url','$l_url','$mat','$food_prefs','$tshirts','$orgname','$tshirtspec');";
   if ($mysqli->query($qry) === TRUE) {
-    header("Location: " . $response['longurl']);
+    header("Location: " . $response['longurl'] . "?embed=form");
   } else {
     echo "Error creating record: " . $mysqli->error;
   }
