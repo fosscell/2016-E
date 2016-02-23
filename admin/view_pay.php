@@ -1,6 +1,5 @@
 <?php
-require "config.php";
-
+require 'config.php';
 $valid_passwords = array ($user_id => $no_pass);
 $valid_users = array_keys($valid_passwords);
 $user = $_SERVER['PHP_AUTH_USER'];
@@ -11,39 +10,38 @@ if (!$validated) {
   header('HTTP/1.0 401 Unauthorized');
   die ("Not authorized");
 }
-// continue only if authenticated
-?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes" /><link rel="shortcut icon" type="image/png" href="//fossmeet.in/img/logo16.png" /><title>FOSSMeet '16</title><link rel="stylesheet" href="//fossmeet.in/css/payment.css">
-</head>
-<body>
-<?php
-$mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
-$qry = "SELECT * FROM ws_prefs;";
-$rslt = $mysqli->query($qry);
-
-if ($rslt->num_rows < 0) {
-	echo "Error getting record: " . $mysqli->error;
-} else {
-echo "Total results: " . $rslt->num_rows . "<br>";
-echo "<table>";
-echo "<tr>";
-echo "<th>ID</th>";
+echo "<!DOCTYPE html><html><head><meta charset='utf-8'><meta http-equiv='X-UA-Compatible' content='IE=edge'><meta name='viewport' content='width=device-width, initial-scale=1'><meta name='apple-mobile-web-app-capable' content='yes' /><link rel='shortcut icon' type='image/png' href='//fossmeet.in/img/logo16.png' /><title>FOSSMeet '16</title><link rel='stylesheet' href='//fossmeet.in/css/payment.css'></head><body>";
+try{
+  $response = $api->paymentsList();
+}
+catch (Exception $e){
+  print('Error: ' . $e->getMessage());
+}
+echo "total paid: " . count($response);
+//print_r($response);
+echo "<table><tr><th>ID</th><th>name</th><th>status</th><th>amount</th><th>date</th><th>Transaction Fees</th>";
 for($i=0;$i<=9;$i++){
-  echo "<th>Pref" . $i . "</th>";
+  echo "<th>Preference " . $i . "</th>";
 }
 echo "</tr>";
-	// output data of each row
-	while($row = $rslt->fetch_assoc()) {
-		echo "<tr>";
-		//echo "<td>".$row['ID']."</td>";
-		echo "<td>".$row['MOJO_ID']."</td>";
-    $prefones = ltrim($row['PREFS'],';');
-    $the_prefs = explode(";",$prefones);
-    foreach ($the_prefs as $value) {
-      switch($value){
+foreach($response as $i){
+  echo "<tr>";
+  echo "<td>" . $i['payment_id'] . "</td>";
+  echo "<td>" . $i['buyer_name'] . "</td>";
+  echo "<td>" . $i['status'] . "</td>";
+  echo "<td>" . $i['currency'] . $i['unit_price'] . "</td>";
+  echo "<td>" . $i['created_at'] . "</td>";    
+  echo "<td>" . $i['fees'] . "</td>";  
+  
+  	$mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
+	$qry = "SELECT * FROM ws_prefs WHERE MOJO_ID = '" . $i['payment_id'] . "';";
+	$rslt = $mysqli->query($qry);
+	$row = $rslt->fetch_assoc();
+	if ($rslt->num_rows == 1) {
+            $prefones = ltrim($row['PREFS'],';');
+	    $the_prefs = explode(";",$prefones);
+	    foreach ($the_prefs as $value) {
+	    switch($value){
         case "no":echo "<th>No preference</th>"; break;
         case "29":echo "<th>What is a Linux distribution? - Syam G Krishnan</th>"; break;
         case "1":echo "<th>Golang Workshop - Baiju Muthukadan</th>"; break;
@@ -67,14 +65,12 @@ echo "</tr>";
         case "40":echo "<th>Consumer Rights and Digital Freedom - Panel Discussion</th>"; break;
         case "ASD":echo "<th>Getting Started with Contributing to Mozilla - Akshay S Dinesh</th>"; break;   
         case "25":echo "<th>Introduction to non linear functions and fractals -Noufal Ibrahim</th>"; break;        
-      }
-
-    }
-		echo "</tr>";
-	}
-echo "</table>\n";
+	    }
+	    }
+  	}
+    
+  echo "</tr>";
 }
-
+echo "</table>";
 ?>
-</body>
-</html>
+</body></html>

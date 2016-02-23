@@ -30,7 +30,7 @@ if ($rslt->num_rows < 0) {
 echo "Total registrations: " . $rslt->num_rows . "<br>";
 echo "<table>";
 echo "<tr>";
-echo "<th></th><th>NAME</th><th>phone number</th><th>electronic mail</th><th>name</th><th>amount paid</th><th>food preference</th><th>t-shirt</th>";
+echo "<th></th><th>NAME</th><th>phone number</th><th>electronic mail</th><th>name</th><th>amount paid</th><th>payment link</th><th>food preference</th><th>t-shirt</th>";
 echo "</tr>";
 	// output data of each row
 	while($row = $rslt->fetch_assoc()) {
@@ -45,7 +45,7 @@ echo "</tr>";
 		//echo "<td>".$row['purpose']."</td>";
 		//echo "<td>".$row['STATUS']."</td>";
 		//echo "<td>".$row['SHORT_URL']."</td>";
-		//echo "<td>".$row['LONG_URL']."</td>";
+		echo "<td>><a target='_blank' href=\"".$row['LONG_URL']."\">here</a></td>";
 		echo "<td>".$row['FOOD_PREFS']."</td>";
 		echo "<td>".$row['T_SHIRTS']."</td>";
 		echo "<td>".$row['TSHIRT_SPEC']."</td>";
