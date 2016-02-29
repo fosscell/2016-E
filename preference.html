@@ -39,12 +39,14 @@
 
 
     <li class=" columns small-6 clear ">
-      <label for="id_mojo_id"><img src="https://im-cdn.com/assets/images/logo.5f3975f3425a.png" width="180px" height="10px"> Payment ID:</label>
+      <label for="id_mojo_id"><img src="https://im-cdn.com/assets/images/logo.5f3975f3425a.png" width="180px" height="10px"> Payment ID: <br>(FORMAT: <b>MOJOXXXXXXXXXXXXXXXX</b>)</label>
       <input class="text-input parsley-validated" id="id_mojo_id" maxlength="20" name="mojo_id" maxlength="20" placeholder="Enter the Instamojo Payment ID" type="text" onfocus="document.getElementById('name_hint').style='display: -webkit-flex;display: -ms-flexbox;display: flex;';" onblur="document.getElementById('name_hint').style='display: none;';" required>
     </li>
 
 <li class="columns small-6 clear">
-<div class="text-hint" id="name_hint">Please enter the Instamojo payment ID that you had received (probably in your e-mail)</div>
+<div class="text-hint" id="name_hint">
+Please enter the Instamojo payment ID that you had received (probably in your e-mail)!
+</div>
 </li>
 
 </div>
@@ -62,28 +64,6 @@
       <label for="id_opt0">Preference 0:</label>
       <select name="opt0" id="id_opt0">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-	<option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-	<option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>
@@ -93,28 +73,6 @@
       <label for="id_opt1">Preference 1:</label>
       <select name="opt1" id="id_opt1">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-		    <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-		    <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>
@@ -124,28 +82,6 @@
       <label for="id_opt2">Preference 2:</label>
       <select name="opt2" id="id_opt2">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-		    <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-		    <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>
@@ -155,28 +91,6 @@
       <label for="id_opt3">Preference 3:</label>
       <select name="opt3" id="id_opt3">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-		    <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-		    <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>
@@ -186,28 +100,6 @@
       <label for="id_opt4">Preference 4:</label>
       <select name="opt4" id="id_opt4">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-		    <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-		    <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>
@@ -216,29 +108,7 @@
     <li class=" columns small-6 clear ">
       <label for="id_opt5">Preference 5:</label>
       <select name="opt5" id="id_opt5">
-        <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-        <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-        <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
+       <option value="no" class="no">No preference</option>
       </select>
     </li>
 </div>
@@ -248,28 +118,6 @@
       <label for="id_opt6">Preference 6:</label>
       <select name="opt6" id="id_opt6">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-		    <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-		    <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>
@@ -279,28 +127,6 @@
       <label for="id_opt7">Preference 7:</label>
       <select name="opt7" id="id_opt7">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-		    <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-		    <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>
@@ -310,28 +136,6 @@
       <label for="id_opt8">Preference 8:</label>
       <select name="opt8" id="id_opt8">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-		    <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-		    <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>
@@ -341,28 +145,6 @@
       <label for="id_opt9">Preference 9:</label>
       <select name="opt9" id="id_opt9">
         <option value="no" class="no">No preference</option>
-        <option value="29" class="29">What is a Linux distribution? - Syam G Krishnan</option>
-        <option value="1" class="1">Golang Workshop - Baiju Muthukadan</option>
-        <option value="27" class="27">FPGA Hacking with Free Software tools - Pramode C.E</option>
-        <option value="SUMOHAN" class="SUMOHAN">Computer Vision / Machine Learning Using Open Source Tools - Sumod Mohan</option>
-        <option value="30" class="30">Evolution of FOSS (and some non-FOSS) stack at HackerRank - Abhimanyu</option>
-        <option value="16" class="16">Y U No fixing WhatsApp? - Pirate Praveen</option>
-        <option value="2" class="2">Intro to Debian Packaging - Balasankar C</option>
-        <option value="11" class="11">MicroHOPE - Introduction to the world of Micro Controllers - Akshai M</option>
-        <option value="9" class="9">Getting Started with Contributing to Open Source - Tapasweni Pathak &amp; Vaishali Thakkar</option>
-        <option value="22" class="22">ReST APIs 101 : Introduction - Shahul Hameed</option>
-        <option value="19" class="19">Contributing to Linux Kernel Workshop - Vaishali Thakkar &amp; Tapasweni Pathak</option>
-        <option value="13" class="13">Introduction to LaTeX and friends - Sasi Kumar</option>
-        <option value="24" class="24">Crowdfunding - Is this really the way to go? - Anish Sheela</option>
-        <option value="42" class="42">GNUKhata, a Professional quality free accounting software - Krishnakant Mane</option>
-        <option value="205" class="205">Programming the NetBSD kernel - Cherry G Mathew</option>
-        <option value="36" class="36">Building your own hackable keyboard - Abhas Abhinav</option>
-        <option value="MEDIAWIKI" class="MEDIAWIKI">Contributing to MediaWiki - Tony Thomas</option>
-        <option value="43" class="43">Designing the next generation of maps using OpenStreetMap data - Ramya Ragupathy</option>
-		    <option value="CONCUR" class="CONCUR">The Design of Clojure - Shantanu</option>
-		    <option value="40" class="40">Consumer Rights and Digital Freedom - Panel Discussion</option>
-	<option value="25" class="25">Introduction to non linear functions and fractals -Noufal Ibrahim</option>
-	<option value="ASD" class="ASD">Getting Started with Contributing to Mozilla - Akshay S Dinesh</option>
       </select>
     </li>
 </div>

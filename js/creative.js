@@ -10,16 +10,16 @@ $(window).ready(function(){$(".element").typed({strings:["Hack the Code"],typeSp
 /* Time Countdown
 	-------------------------------------------------------------------*/
 	var today = new Date();
-	var fm16 = new Date(today.getFullYear(),1,25,15);
+	var fm16 = new Date("Fri Feb 26 2016 16:00:30 GMT+0530 (India Standard Time)");
 
 	var one_sec = 1000;
-	var secl = Math.ceil((fm16.getTime()-today.getTime())/one_sec);
+	var secl = Math.floor((fm16.getTime()-today.getTime())/one_sec);
 
-	var minl = Math.ceil(secl / 60);
+	var minl = Math.floor(secl / 60);
 	secl = secl % 60;
-	var hrsl = Math.ceil(minl / 60);
+	var hrsl = Math.floor(minl / 60);
 	minl = minl % 60;
-	var daysl = Math.ceil(hrsl / 24);
+	var daysl = Math.floor(hrsl / 24);
 	hrsl = hrsl % 24;
 
 	$('#time_countdown').countDown({

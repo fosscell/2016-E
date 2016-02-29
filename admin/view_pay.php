@@ -31,7 +31,9 @@ foreach($response as $i){
   echo "<td>" . $i['status'] . "</td>";
   echo "<td>" . $i['currency'] . $i['unit_price'] . "</td>";
   echo "<td>" . $i['created_at'] . "</td>";    
+  $te = $te + $i['unit_price'];
   echo "<td>" . $i['fees'] . "</td>";  
+  $te = $te -  $i['fees'];
   
   	$mysqli = new mysqli($db_server, $db_user, $db_pass, $db_name);
 	$qry = "SELECT * FROM ws_prefs WHERE MOJO_ID = '" . $i['payment_id'] . "';";
@@ -72,5 +74,6 @@ foreach($response as $i){
   echo "</tr>";
 }
 echo "</table>";
+echo "total earnings : Rs" . $te;
 ?>
 </body></html>

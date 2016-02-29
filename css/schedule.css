@@ -246,7 +246,7 @@ article a
 	display:block;
 }
 
-#icon_panel_desc
+#icon_panel_desc, #day0, #day1, #day2
 {
 	font-size:1.9em;
 	text-align:center;
@@ -522,11 +522,13 @@ td>a
 .yellow
 {
 	background-color:#fcf4bb; 
+	text-align:center; 
 }
 
 .red
 {
 	background-color:#fcd4bd;
+	text-align:center; 
 }
 
 .blue
@@ -538,6 +540,7 @@ td>a
 .green
 {
 	background-color:#a3f59d; 
+	text-align:center; 
 }
 
 #legend

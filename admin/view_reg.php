@@ -34,8 +34,11 @@ echo "<th></th><th>NAME</th><th>phone number</th><th>electronic mail</th><th>nam
 echo "</tr>";
 	// output data of each row
 	while($row = $rslt->fetch_assoc()) {
+
+
 		echo "<tr>";
 		//echo "<td>".$row['ID']."</td>";
+
 		echo "<td>".$row['modified_at']."</td>";
 		echo "<td>".$row['BUYER_NAME']."</td>";
 		echo "<td>".$row['PHONE_NUMBER']."</td>";
@@ -45,11 +48,12 @@ echo "</tr>";
 		//echo "<td>".$row['purpose']."</td>";
 		//echo "<td>".$row['STATUS']."</td>";
 		//echo "<td>".$row['SHORT_URL']."</td>";
-		echo "<td>><a target='_blank' href=\"".$row['LONG_URL']."\">here</a></td>";
+		echo "<td>><a target='_blank' href=\"check_pay.php?q=".$row['ID']."\">here</a></td>";
 		echo "<td>".$row['FOOD_PREFS']."</td>";
 		echo "<td>".$row['T_SHIRTS']."</td>";
 		echo "<td>".$row['TSHIRT_SPEC']."</td>";
 		echo "</tr>";
+
 	}
 echo "</table>\n";
 }
